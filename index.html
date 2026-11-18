@@ -1,1 +1,311 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mount Hood Filtration | Industrial Baghouse &amp; Liquid Filtration</title>
+  <meta name="description" content="Industrial baghouse filter bags, cages, diaphragm valves, and liquid filtration systems. Custom-sourced and stocked in Hood River, Oregon." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+          colors: {
+            void: '#000000',
+            surface: '#0A0A0C',
+            panel: '#111114',
+            borderline: '#1F2024',
+            muted: '#8A8F98',
+            accent: '#E2E8F0',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      background-color: #000000;
+      color: #F4F4F6;
+      -webkit-font-smoothing: antialiased;
+    }
+    .grid-bg {
+      background-size: 48px 48px;
+      background-image: 
+        linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    }
+    .glass-nav {
+      background: rgba(0, 0, 0, 0.82);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+    }
+    .tab-active {
+      border-bottom: 2px solid #FFFFFF;
+      color: #FFFFFF;
+    }
+    input:focus, select:focus, textarea:focus {
+      outline: none;
+      border-color: #FFFFFF;
+    }
+  </style>
+</head>
+<body class="bg-void text-white font-sans selection:bg-white selection:text-black">
 
+  <!-- Navigation -->
+  <header class="fixed top-0 inset-x-0 z-50 glass-nav border-b border-borderline">
+    <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-3 group">
+        <div class="w-7 h-7 border border-white/80 flex items-center justify-center">
+          <div class="w-2.5 h-2.5 bg-white"></div>
+        </div>
+        <span class="font-mono text-xs tracking-[0.22em] uppercase font-semibold text-white">
+          Mount Hood Filtration
+        </span>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-8 text-xs font-mono uppercase tracking-[0.16em] text-muted">
+        <a href="#catalog" class="hover:text-white transition-colors">Catalog</a>
+        <a href="#media" class="hover:text-white transition-colors">Media Matrix</a>
+        <a href="#services" class="hover:text-white transition-colors">Field Services</a>
+        <a href="#rfq" class="hover:text-white transition-colors">Request Quote</a>
+      </nav>
+
+      <a href="#rfq" class="px-4 py-2 bg-white text-black font-mono text-xs uppercase tracking-[0.15em] font-semibold hover:bg-neutral-200 transition-colors">
+        Get Quote
+      </a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative pt-32 pb-24 md:pt-44 md:pb-32 border-b border-borderline grid-bg overflow-hidden">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="max-w-3xl">
+        <div class="inline-flex items-center gap-2.5 px-3 py-1 border border-borderline bg-surface mb-8">
+          <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+          <span class="font-mono text-[11px] uppercase tracking-[0.18em] text-neutral-300">
+            Hood River, OR &bull; Industrial Dust &amp; Liquid Filtration
+          </span>
+        </div>
+
+        <h1 class="text-4xl sm:text-6xl md:text-7xl font-semibold tracking-tight leading-[1.04] text-white mb-6">
+          Precision filtration.<br />
+          <span class="text-neutral-500">Zero unplanned downtime.</span>
+        </h1>
+
+        <p class="text-base sm:text-lg text-neutral-400 max-w-2xl leading-relaxed mb-10 font-light">
+          Custom-manufactured baghouse filter bags, heavy-duty cages, diaphragm pulse valves, and liquid filtration vessels engineered for timber, cement, steel, food processing, and bulk manufacturing across the Pacific Northwest.
+        </p>
+
+        <div class="flex flex-wrap items-center gap-4">
+          <a href="#rfq" class="px-7 py-3.5 bg-white text-black font-mono text-xs uppercase tracking-[0.18em] font-semibold hover:bg-neutral-200 transition-colors">
+            Configure RFQ &rarr;
+          </a>
+          <a href="#catalog" class="px-7 py-3.5 border border-borderline bg-surface text-white font-mono text-xs uppercase tracking-[0.18em] hover:border-neutral-500 transition-colors">
+            Explore Hardware
+          </a>
+        </div>
+      </div>
+
+      <!-- Technical Telemetry Bar -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-px bg-borderline border border-borderline mt-20">
+        <div class="bg-surface p-6">
+          <div class="font-mono text-[11px] uppercase tracking-[0.16em] text-muted mb-1">Max Continuous Temp</div>
+          <div class="font-mono text-2xl font-medium text-white">500&deg;F / 260&deg;C</div>
+        </div>
+        <div class="bg-surface p-6">
+          <div class="font-mono text-[11px] uppercase tracking-[0.16em] text-muted mb-1">Particulate Capture</div>
+          <div class="font-mono text-2xl font-medium text-white">99.99% @ 0.5&mu;m</div>
+        </div>
+        <div class="bg-surface p-6">
+          <div class="font-mono text-[11px] uppercase tracking-[0.16em] text-muted mb-1">OEM Compatibility</div>
+          <div class="font-mono text-2xl font-medium text-white">Donaldson / Mikropul</div>
+        </div>
+        <div class="bg-surface p-6">
+          <div class="font-mono text-[11px] uppercase tracking-[0.16em] text-muted mb-1">Emergency Dispatch</div>
+          <div class="font-mono text-2xl font-medium text-white">24 / 7 Field Support</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Hardware Catalog Section -->
+  <section id="catalog" class="py-24 border-b border-borderline">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+        <div>
+          <div class="font-mono text-xs uppercase tracking-[0.2em] text-muted mb-3">01 // Hardware &amp; Components</div>
+          <h2 class="text-3xl sm:text-4xl font-semibold tracking-tight">Filtration Product Systems</h2>
+        </div>
+
+        <!-- Category Tabs -->
+        <div class="flex flex-wrap gap-6 border-b border-borderline font-mono text-xs uppercase tracking-[0.15em]">
+          <button onclick="switchTab('bags')" id="tab-bags" class="pb-3 tab-active transition-colors">
+            Filter Bags
+          </button>
+          <button onclick="switchTab('cages')" id="tab-cages" class="pb-3 text-muted hover:text-white transition-colors">
+            Cages &amp; Venturis
+          </button>
+          <button onclick="switchTab('valves')" id="tab-valves" class="pb-3 text-muted hover:text-white transition-colors">
+            Valves &amp; Kits
+          </button>
+          <button onclick="switchTab('liquid')" id="tab-liquid" class="pb-3 text-muted hover:text-white transition-colors">
+            Liquid Filtration
+          </button>
+        </div>
+      </div>
+
+      <!-- Tab Content: Filter Bags -->
+      <div id="panel-bags" class="grid md:grid-cols-3 gap-6">
+        <div class="border border-borderline bg-surface p-8 flex flex-col justify-between hover:border-neutral-600 transition-colors">
+          <div>
+            <div class="flex items-center justify-between mb-6">
+              <span class="font-mono text-xs text-muted">SERIES // FB-01</span>
+              <span class="px-2 py-0.5 text-[10px] font-mono uppercase tracking-wider bg-white/10 text-white">High-Demand</span>
+            </div>
+            <h3 class="text-xl font-medium mb-3">Pulse-Jet &amp; Snap-Band Bags</h3>
+            <p class="text-sm text-neutral-400 leading-relaxed mb-6">
+              Precision-sewn top-load snap-band, raw-edge, and ring-top filter bags engineered for high air-to-cloth ratios and tight tube-sheet seals.
+            </p>
+          </div>
+          <div class="pt-6 border-t border-borderline space-y-2 font-mono text-xs text-neutral-300">
+            <div class="flex justify-between"><span class="text-muted">Diameters:</span><span>4.5" to 12.75" OD</span></div>
+            <div class="flex justify-between"><span class="text-muted">Lengths:</span><span>Up to 360" (30 ft)</span></div>
+            <div class="flex justify-between"><span class="text-muted">Finishes:</span><span>Singed, Glazed, ePTFE</span></div>
+          </div>
+        </div>
+
+        <div class="border border-borderline bg-surface p-8 flex flex-col justify-between hover:border-neutral-600 transition-colors">
+          <div>
+            <div class="flex items-center justify-between mb-6">
+              <span class="font-mono text-xs text-muted">SERIES // FB-02</span>
+              <span class="px-2 py-0.5 text-[10px] font-mono uppercase tracking-wider bg-white/10 text-white">High-Demand</span>
+            </div>
+            <h3 class="text-xl font-medium mb-3">Pleated Filter Elements</h3>
+            <p class="text-sm text-neutral-400 leading-relaxed mb-6">
+              Drop-in pleated replacements that increase filtration surface area up to 3x inside existing baghouses, slashing differential pressure (&Delta;P).
+            </p>
+          </div>
+          <div class="pt-6 border-t border-borderline space-y-2 font-mono text-xs text-neutral-300">
+            <div class="flex justify-between"><span class="text-muted">Media:</span><span>Spunbond Polyester / PTFE</span></div>
+            <div class="flex justify-between"><span class="text-muted">Top Styles:</span><span>Twist-Lock, Snap-Band, Flange</span></div>
+            <div class="flex justify-between"><span class="text-muted">Temp Limit:</span><span>Up to 275&deg;F (135&deg;C)</span></div>
+          </div>
+        </div>
+
+        <div class="border border-borderline bg-surface p-8 flex flex-col justify-between hover:border-neutral-600 transition-colors">
+          <div>
+            <div class="flex items-center justify-between mb-6">
+              <span class="font-mono text-xs text-muted">SERIES // FB-03</span>
+              <span class="px-2 py-0.5 text-[10px] font-mono uppercase tracking-wider border border-borderline text-neutral-400">Custom Spec</span>
+            </div>
+            <h3 class="text-xl font-medium mb-3">Reverse-Air &amp; Shaker Bags</h3>
+            <p class="text-sm text-neutral-400 leading-relaxed mb-6">
+              Heavy-duty woven fiberglass and multifilament bags with anti-collapse rings and reinforced cuffs for high-temperature boilers and kilns.
+            </p>
+          </div>
+          <div class="pt-6 border-t border-borderline space-y-2 font-mono text-xs text-neutral-300">
+            <div class="flex justify-between"><span class="text-muted">Construction:</span><span>Woven Fiberglass / Nomex</span></div>
+            <div class="flex justify-between"><span class="text-muted">Coatings:</span><span>Acid-Resistant / Silicone-Graphite</span></div>
+            <div class="flex justify-between"><span class="text-muted">Temp Limit:</span><span>500&deg;F (260&deg;C)</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tab Content: Cages & Venturis -->
+      <div id="panel-cages" class="hidden grid md:grid-cols-3 gap-6">
+        <div class="border border-borderline bg-surface p-8 flex flex-col justify-between hover:border-neutral-600 transition-colors">
+          <div>
+            <div class="flex items-center justify-between mb-6">
+              <span class="font-mono text-xs text-muted">SERIES // CG-01</span>
+              <span class="px-2 py-0.5 text-[10px] font-mono uppercase tracking-wider bg-white/10 text-white">High-Demand</span>
+            </div>
+            <h3 class="text-xl font-medium mb-3">10, 12 &amp; 20-Wire Filter Cages</h3>
+            <p class="text-sm text-neutral-400 leading-relaxed mb-6">
+              Resistance-welded vertical wire cages engineered to prevent bag collapse and media abrasion during aggressive pulse-jet cleaning cycles.
+            </p>
+          </div>
+          <div class="pt-6 border-t border-borderline space-y-2 font-mono text-xs text-neutral-300">
+            <div class="flex justify-between"><span class="text-muted">Alloys:</span><span>Galvanized, 304SS, 316SS</span></div>
+            <div class="flex justify-between"><span class="text-muted">Top Styles:</span><span>Roll-Flange, T-Flange, Split-Collar</span></div>
+            <div class="flex justify-between"><span class="text-muted">Wire Gauge:</span><span>9 &amp; 11 Gauge Heavy Duty</span></div>
+          </div>
+        </div>
+
+        <div class="border border-borderline bg-surface p-8 flex flex-col justify-between hover:border-neutral-600 transition-colors">
+          <div>
+            <div class="flex items-center justify-between mb-6">
+              <span class="font-mono text-xs text-muted">SERIES // CG-02</span>
+              <span class="px-2 py-0.5 text-[10px] font-mono uppercase tracking-wider border border-borderline text-neutral-400">Low Headroom</span>
+            </div>
+            <h3 class="text-xl font-medium mb-3">Two-Piece Twist-Lock Cages</h3>
+            <p class="text-sm text-neutral-400 leading-relaxed mb-6">
+              Interlocking upper and lower cage sections designed for indoor collectors with restricted ceiling clearance above the clean-air plenum.
+            </p>
+          </div>
+          <div class="pt-6 border-t border-borderline space-y-2 font-mono text-xs text-neutral-300">
+            <div class="flex justify-between"><span class="text-muted">Joint Style:</span><span>Finger-Lock / Twist-Coupler</span></div>
+            <div class="flex justify-between"><span class="text-muted">Lengths:</span><span>8 ft to 24 ft Combined</span></div>
+            <div class="flex justify-between"><span class="text-muted">Finish:</span><span>Epoxy-Coated / Mill Galvanized</span></div>
+          </div>
+        </div>
+
+        <div class="border border-borderline bg-surface p-8 flex flex-col justify-between hover:border-neutral-600 transition-colors">
+          <div>
+            <div class="flex items-center justify-between mb-6">
+              <span class="font-mono text-xs text-muted">SERIES // VN-03</span>
+              <span class="px-2 py-0.5 text-[10px] font-mono uppercase tracking-wider border border-borderline text-neutral-400">Airflow</span>
+            </div>
+            <h3 class="text-xl font-medium mb-3">Spun Aluminum &amp; Steel Venturis</h3>
+            <p class="text-sm text-neutral-400 leading-relaxed mb-6">
+              Aerodynamically formed venturi nozzles that amplify compressed air pulse energy down the entire length of long filter bags.
+            </p>
+          </div>
+          <div class="pt-6 border-t border-borderline space-y-2 font-mono text-xs text-neutral-300">
+            <div class="flex justify-between"><span class="text-muted">Materials:</span><span>Spun Aluminum, Carbon, 316SS</span></div>
+            <div class="flex justify-between"><span class="text-muted">Mounting:</span><span>Integral Welded or Removable</span></div>
+            <div class="flex justify-between"><span class="text-muted">Throat Sizes:</span><span>2.0" to 4.5" ID</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tab Content: Valves & Kits -->
+      <div id="panel-valves" class="hidden grid md:grid-cols-3 gap-6">
+        <div class="border border-borderline bg-surface p-8 flex flex-col justify-between hover:border-neutral-600 transition-colors">
+          <div>
+            <div class="flex items-center justify-between mb-6">
+              <span class="font-mono text-xs text-muted">SERIES // VL-01</span>
+              <span class="px-2 py-0.5 text-[10px] font-mono uppercase tracking-wider bg-white/10 text-white">High-Demand</span>
+            </div>
+            <h3 class="text-xl font-medium mb-3">Diaphragm Pulse Jet Valves</h3>
+            <p class="text-sm text-neutral-400 leading-relaxed mb-6">
+              High-flow threaded, dresser-nut, and flanged manifold pulse valves delivering rapid opening response and peak cleaning pressure.
+            </p>
+          </div>
+          <div class="pt-6 border-t border-borderline space-y-2 font-mono text-xs text-neutral-300">
+            <div class="flex justify-between"><span class="text-muted">OEM Equivalents:</span><span>Goyen, ASCO, Turbo, Mecair</span></div>
+            <div class="flex justify-between"><span class="text-muted">Port Sizes:</span><span>3/4" to 3" NPT / Dresser</span></div>
+            <div class="flex justify-between"><span class="text-muted">Coils:</span><span>24VDC, 120VAC, NEMA 4/7</span></div>
+          </div>
+        </div>
+
+        <div class="border border-borderline bg-surface p-8 flex flex-col justify-between hover:border-neutral-600 transition-colors">
+          <div>
+            <div class="flex items-center justify-between mb-6">
+              <span class="font-mono text-xs text-muted">SERIES // VL-02</span>
+              <span class="px-2 py-0.5 text-[10px] font-mono uppercase tracking-wider bg-white/10 text-white">High-Demand</span>
+            </div>
+            <h3 class="text-xl font-medium mb-3">OEM Diaphragm Repair Kits</h3>
+            <p class="text-sm text-neutral-400 leading-relaxed mb-6">
+              Drop-in nitrile and Viton replacement diaphragms, springs, and pilot assemblies to eliminate compressed air leaks without replacing valve bodies.
+            </p>
+          </div>
+          <div class="pt-6 border-t border-borderline space-y-2 font-mono text-xs text-neutral-300">
+            <div class="flex justify-between"><span class="text-muted">Elastomers:</span><span>Buna-N (Standard) / Viton (High-Temp)</span></div>
+            <div class="flex justify-between"><span class="text-muted">Temp Range:</span><span>-40&deg
