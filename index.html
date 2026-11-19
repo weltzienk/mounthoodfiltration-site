@@ -298,8 +298,8 @@
           </button>
 
           <!-- Tile 2: Welded-Seam Bags -->
-          <button onclick="openQuoteDrawer({ mode: 'bags', bagStyle: 'Welded-Seam Bag', media: 'PTFE / Teflon® 500°F' })" class="group flex flex-col justify-between rounded-xl border border-line bg-surface p-5 text-left transition hover:border-white">
-            <div>
+          <button onclick="openQuoteDrawer({ mode: 'bags', bagStyle: 'Welded-Seam Bag', media: 'PTFE / Teflon® 500°F' })" class="group relative flex flex-col justify-between rounded-xl border border-line bg-surface overflow-hidden p-0 text-left transition hover:border-white">
+            <div class="p-6 pb-3">
               <div class="flex items-center justify-between">
                 <span class="font-mono text-[11px] font-bold text-white">02</span>
                 <svg class="h-6 w-6 text-white/80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
@@ -313,7 +313,11 @@
                 100% fused vertical seams—zero needle holes for ultra-fine particulate.
               </p>
             </div>
-            <span class="mt-5 font-mono text-[11px] font-semibold text-muted group-hover:text-white">Configure &rarr;</span>
+            <div class="relative h-24 w-full mt-2 overflow-hidden">
+              <img src="assets/images/WELDED%20BAG.png" alt="Welded-seam filter bag" class="w-full h-full object-cover object-center opacity-[0.36] group-hover:opacity-50 transition-all duration-500" style="filter: brightness(0.72) contrast(90%) saturate(85%);">
+              <div class="absolute inset-0 pointer-events-none" style="background: linear-gradient(to bottom, #111113 0%, rgba(17, 17, 19, 0.35) 45%, rgba(10, 10, 12, 0.88) 100%);"></div>
+              <span class="absolute bottom-4 left-6 z-10 font-mono text-[11px] font-semibold text-muted group-hover:text-white">Configure &rarr;</span>
+            </div>
           </button>
 
           <!-- Tile 3: Shaker Bags -->
