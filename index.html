@@ -176,13 +176,13 @@
     <div id="view-bags" class="main-view">
 
       <!-- SECTION 1 — MINIMALIST HERO + INSTANT LOOKUP BAR -->
-      <section class="subtle-glow border-b border-line" style="position: relative; overflow: hidden;">
+      <section class="subtle-glow border-b border-line" style="position: relative; overflow: hidden; min-height: 600px;">
         <!-- Mount Hood monochrome backdrop -->
         <div aria-hidden="true" style="
           position: absolute; inset: 0;
           background-image: url('assets/images/mh_2.jpg');
           background-size: cover;
-          background-position: center 22%;
+          background-position: center 4%;
           filter: contrast(108%) saturate(114%);
           opacity: 0.78;
           z-index: 0;
@@ -194,6 +194,12 @@
           z-index: 1;
         "></div>
         <div class="mx-auto max-w-5xl px-4 py-14 text-center sm:px-8 sm:py-20" style="position: relative; z-index: 2;">
+          <!-- Localized radial glow behind center text -->
+          <div aria-hidden="true" style="
+            position: absolute; inset: -40px -60px;
+            background: radial-gradient(ellipse at 50% 45%, rgba(10, 10, 12, 0.52) 0%, rgba(10, 10, 12, 0.18) 58%, transparent 80%);
+            pointer-events: none; z-index: -1;
+          "></div>
           <p class="font-mono text-xs font-semibold tracking-[0.22em] text-muted uppercase" style="text-shadow: 0 2px 16px rgba(0, 0, 0, 0.92), 0 0 32px rgba(0, 0, 0, 0.75);">
             Forged in the Gorge. Built for the Nation.
           </p>
@@ -202,7 +208,7 @@
             Custom &amp; OEM Replacement Baghouse Filter Bags
           </h1>
 
-          <p class="mx-auto mt-4 max-w-2xl text-sm leading-relaxed text-muted sm:text-base" style="text-shadow: 0 2px 16px rgba(0, 0, 0, 0.92), 0 0 32px rgba(0, 0, 0, 0.75);">
+          <p class="mx-auto mt-4 max-w-2xl text-sm leading-relaxed text-white sm:text-base" style="text-shadow: 0 2px 16px rgba(0, 0, 0, 0.92), 0 0 32px rgba(0, 0, 0, 0.75);">
             Precision-sewn and welded pulse-jet, shaker, and reverse-air bags built to exact OEM specs. Fast turnaround.
           </p>
 
