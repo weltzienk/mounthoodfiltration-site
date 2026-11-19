@@ -43,7 +43,7 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&family=Kaushan+Script&display=swap" rel="stylesheet" />
   <script>
     tailwind.config = {
       darkMode: 'class',
@@ -100,9 +100,17 @@
 
       <!-- Left: Wide-Tracked Wordmark -->
       <div class="flex items-center gap-8 lg:gap-10">
-        <button onclick="switchMainView('bags')" class="group flex items-center focus:outline-none">
-          <img src="assets/images/mount-hood-logo-nav.png" alt="Mount Hood Industrial Filtration Solutions" class="h-11 w-auto object-contain">
-        </button>
+        <a href="#" onclick="switchMainView('bags'); return false;" class="inline-flex flex-col select-none group" aria-label="Mount Hood Industrial Filtration Solutions">
+          <svg viewBox="0 0 340 68" class="h-11 w-auto overflow-visible" xmlns="http://www.w3.org/2000/svg">
+            <text x="0" y="42" font-family="'Kaushan Script', 'Brush Script MT', 'Segoe Script', cursive" font-weight="900" font-style="italic" font-size="44" letter-spacing="-0.5">
+              <tspan fill="#2ea836">Mount</tspan>
+              <tspan fill="#ffffff" dx="8">Hood</tspan>
+            </text>
+            <text x="2" y="61" font-family="'Inter', -apple-system, BlinkMacSystemFont, sans-serif" font-weight="800" font-size="11.5" letter-spacing="3.6" fill="#ffffff">
+              INDUSTRIAL FILTRATION SOLUTIONS
+            </text>
+          </svg>
+        </a>
 
         <!-- Clean Horizontal Navigation Links (5 Core Tabs) -->
         <nav class="hidden items-center gap-6 md:flex" aria-label="Primary Navigation">
