@@ -22,6 +22,54 @@
     "offers": {"@type": "Offer", "availability": "https://schema.org/InStock", "priceCurrency": "USD"}
   }
   </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Can you cross-reference my Donaldson Torit or Farr Gold Series cartridge part number?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Mount Hood Filtration cross-references OEM part numbers from Donaldson Torit\u00ae, Camfil Farr\u00ae, RoboVent\u00ae, Nordson\u00ae, AAF International\u00ae, UAS (United Air Specialists)\u00ae, and many others. Submit your existing part number and we will confirm the exact OD, length, pleat count, end-cap style, and media match\u2014typically same business day."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the difference between open/open and open/closed cartridge end caps?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Open\/open cartridges have gasketed open ends on both top and bottom for use in continuous stacked assemblies or horizontal and vertical slide-in rack collectors. Open\/closed cartridges have a gasketed open top and a solid closed bottom pan\u2014usually with a centered 1\/2\" bolt hole\u2014for yoke-mount or single-tube-sheet collectors. The correct style is determined by your collector\u2019s tube-sheet mounting design."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What filter media should I specify for welding, plasma cutting, or metalworking dust?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "For welding fume, plasma cutting, and general metalworking, nanofiber flame-retardant media (MERV 15) is the gold standard\u2014it offers high efficiency on sub-micron particles and self-cleans well with pulse-jet. Spunbond polyester is a durable general-purpose choice for coarser metalworking dust. For laser cutting and high oil-mist environments, an ePTFE membrane spunbond cartridge provides superior cake release. If your process generates flammable dusts or sparks, specify antistatic (conductive) media."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is a 3-lug twist-lock cartridge and which collectors use them?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A 3-lug (or 4-lug) twist-lock cartridge uses a bayonet-style flange on the end cap with three or four locking ears spaced 120\u00b0 or 90\u00b0 apart. The cartridge is inserted into the tube-sheet aperture and rotated a quarter-turn to lock\u2014no tools required. This design is used primarily in Farr Tenkay\u00ae and Camfil\u00ae tube-sheet collectors, as well as some Nordson\u00ae and AAF\u00ae configurations. We build direct drop-in replacements in nanofiber, spunbond, and cellulose-blend media."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can you supply oval cartridges for non-round pleated collectors?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. We supply BCSOVSB (spunbond) and BCSOVNF (nanofiber) oval cartridges in the standard 11.4\u201d \u00d7 14.4\u201d \u00d7 26\u201d profile and other custom oval dimensions. Oval cartridges use an expanded metal outer cage and wide-pleat design for maximum filter surface area in a compact footprint. Submit your collector model number or existing cartridge dimensions for an exact match."
+        }
+      }
+    ]
+  }
+  </script>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -112,10 +160,110 @@
       </div>
     </section>
 
+    <!-- INTERNAL CROSS-LINK BAR -->
+    <section class="border-t border-[#1a1a1c] bg-[#070709]">
+      <div class="mx-auto max-w-6xl px-4 py-7 sm:px-8">
+        <p class="mb-3 font-mono text-[9px] font-semibold tracking-widest text-zinc-700 uppercase">Also Available From Mount Hood Filtration</p>
+        <div class="flex flex-wrap gap-2">
+          <a href="index.html" class="rounded-lg border border-[#222] bg-[#111113] px-4 py-2.5 font-mono text-xs font-semibold text-zinc-400 transition hover:border-white hover:text-white">Filter Bags &amp; Media &rarr;</a>
+          <a href="cages.html" class="rounded-lg border border-[#222] bg-[#111113] px-4 py-2.5 font-mono text-xs font-semibold text-zinc-400 transition hover:border-white hover:text-white">Filter Bag Cages &rarr;</a>
+          <span class="rounded-lg border border-[#2ea836]/30 bg-[#111113] px-4 py-2.5 font-mono text-xs font-semibold text-[#2ea836] cursor-default">Dust Collector Cartridges &#10003;</span>
+          <a href="valves.html" class="rounded-lg border border-[#222] bg-[#111113] px-4 py-2.5 font-mono text-xs font-semibold text-zinc-400 transition hover:border-white hover:text-white">Pulse-Jet Valves &amp; Kits &rarr;</a>
+          <a href="field-services.html" class="rounded-lg border border-[#222] bg-[#111113] px-4 py-2.5 font-mono text-xs font-semibold text-zinc-400 transition hover:border-white hover:text-white">Field Service Crews &rarr;</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- OEM SYSTEMS & COLLECTORS STRIP -->
+    <section class="border-t border-[#1a1a1c] bg-[#070709]">
+      <div class="mx-auto max-w-6xl px-4 py-10 sm:px-8">
+        <div class="mb-5 flex items-center gap-2.5">
+          <span class="h-1.5 w-1.5 rounded-full bg-[#2ea836]"></span>
+          <h2 class="font-mono text-[11px] font-bold tracking-widest text-white uppercase">OEM Collector Systems We Cross-Reference Cartridges For</h2>
+        </div>
+        <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <div>
+            <p class="mb-2 font-mono text-[9px] font-bold tracking-widest text-[#2ea836] uppercase">Collector Brands</p>
+            <p class="font-mono text-[11px] leading-relaxed text-zinc-600">Donaldson Torit&reg; &bull; Camfil Farr&reg; &bull; RoboVent&reg; &bull; Nordson&reg; &bull; AAF International&reg; &bull; UAS&reg; &bull; Wheelabrator&reg; &bull; MikroPul&reg; &bull; Micro Air&reg;</p>
+          </div>
+          <div>
+            <p class="mb-2 font-mono text-[9px] font-bold tracking-widest text-[#2ea836] uppercase">Cartridge Media</p>
+            <p class="font-mono text-[11px] leading-relaxed text-zinc-600">Nanofiber (MERV 15 FR) &bull; Spunbond Polyester &bull; Cellulose/Poly Blend &bull; ePTFE Membrane &bull; Antistatic &bull; High-Temp</p>
+          </div>
+          <div>
+            <p class="mb-2 font-mono text-[9px] font-bold tracking-widest text-[#2ea836] uppercase">End Cap Styles</p>
+            <p class="font-mono text-[11px] leading-relaxed text-zinc-600">Open / Open &bull; Open / Closed w/ Bolt Hole &bull; 3-Lug Twist-Lock &bull; 4-Lug Bayonet &bull; Oval (BCSOVSB / BCSOVNF) &bull; Custom Flange</p>
+          </div>
+          <div>
+            <p class="mb-2 font-mono text-[9px] font-bold tracking-widest text-[#2ea836] uppercase">Industries Served</p>
+            <p class="font-mono text-[11px] leading-relaxed text-zinc-600">Welding &amp; Plasma Cutting &bull; Laser Cutting &bull; Metalworking &bull; Woodworking &bull; Pharmaceutical &bull; Chemical &amp; Powder &bull; Food Processing</p>
+          </div>
+        </div>
+        <p class="mt-5 font-mono text-[10px] text-zinc-700">All OEM names and part numbers are used for cross-reference and sourcing identification only.</p>
+      </div>
+    </section>
+
+    <!-- FAQ ACCORDION -->
+    <section class="border-t border-[#1a1a1c] bg-[#0a0a0c]">
+      <div class="mx-auto max-w-4xl px-4 py-14 sm:px-8">
+        <div class="mb-7 flex items-center gap-2.5">
+          <span class="h-1.5 w-1.5 rounded-full bg-[#2ea836]"></span>
+          <h2 class="font-mono text-[11px] font-bold tracking-widest text-white uppercase">Dust Collector Cartridge FAQ</h2>
+        </div>
+        <div class="space-y-2">
+          <div class="overflow-hidden rounded-lg border border-[#1e1e20]">
+            <button onclick="mhfToggleFaq(this)" class="flex w-full items-start justify-between gap-4 px-5 py-4 text-left transition hover:bg-[#111113]">
+              <span class="text-sm font-semibold leading-snug text-white">Can you cross-reference my Donaldson Torit&reg; or Farr Gold Series cartridge part number?</span>
+              <svg class="mhf-faq-icon mt-0.5 h-4 w-4 shrink-0 text-zinc-600 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div class="mhf-faq-answer hidden border-t border-[#1e1e20] bg-[#070709] px-5 py-4">
+              <p class="text-sm leading-relaxed text-zinc-400">Yes. We cross-reference OEM part numbers from Donaldson Torit&reg;, Camfil Farr&reg;, RoboVent&reg;, Nordson&reg;, AAF International&reg;, UAS&reg;, and many others. Submit your existing part number and we confirm the exact OD, length, pleat count, end-cap style, and media match&mdash;typically same business day.</p>
+            </div>
+          </div>
+          <div class="overflow-hidden rounded-lg border border-[#1e1e20]">
+            <button onclick="mhfToggleFaq(this)" class="flex w-full items-start justify-between gap-4 px-5 py-4 text-left transition hover:bg-[#111113]">
+              <span class="text-sm font-semibold leading-snug text-white">What is the difference between open/open and open/closed cartridge end caps?</span>
+              <svg class="mhf-faq-icon mt-0.5 h-4 w-4 shrink-0 text-zinc-600 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div class="mhf-faq-answer hidden border-t border-[#1e1e20] bg-[#070709] px-5 py-4">
+              <p class="text-sm leading-relaxed text-zinc-400"><strong class="text-white">Open/open cartridges</strong> have gasketed open ends on both top and bottom, used in continuous stacked assemblies or horizontal/vertical slide-in rack collectors. <strong class="text-white">Open/closed cartridges</strong> have a gasketed open top and a solid closed bottom pan&mdash;usually with a centered bolt hole&mdash;for yoke-mount or single-tube-sheet collectors. The correct style is determined entirely by your collector&rsquo;s tube-sheet mounting design.</p>
+            </div>
+          </div>
+          <div class="overflow-hidden rounded-lg border border-[#1e1e20]">
+            <button onclick="mhfToggleFaq(this)" class="flex w-full items-start justify-between gap-4 px-5 py-4 text-left transition hover:bg-[#111113]">
+              <span class="text-sm font-semibold leading-snug text-white">What filter media should I use for welding, plasma cutting, or laser fume?</span>
+              <svg class="mhf-faq-icon mt-0.5 h-4 w-4 shrink-0 text-zinc-600 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div class="mhf-faq-answer hidden border-t border-[#1e1e20] bg-[#070709] px-5 py-4">
+              <p class="text-sm leading-relaxed text-zinc-400">For welding fume, plasma cutting, and metalworking, <strong class="text-white">nanofiber flame-retardant media (MERV 15)</strong> is the gold standard&mdash;high efficiency on sub-micron particles and excellent pulse-jet cake release. <strong class="text-white">Spunbond polyester</strong> suits coarser metalworking dust. For laser cutting and oil-mist environments, <strong class="text-white">ePTFE membrane spunbond</strong> gives superior cake release. Processes generating flammable dusts or sparks should specify <strong class="text-white">antistatic (conductive) media</strong>.</p>
+            </div>
+          </div>
+          <div class="overflow-hidden rounded-lg border border-[#1e1e20]">
+            <button onclick="mhfToggleFaq(this)" class="flex w-full items-start justify-between gap-4 px-5 py-4 text-left transition hover:bg-[#111113]">
+              <span class="text-sm font-semibold leading-snug text-white">What is a 3-lug twist-lock cartridge and which collectors use them?</span>
+              <svg class="mhf-faq-icon mt-0.5 h-4 w-4 shrink-0 text-zinc-600 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div class="mhf-faq-answer hidden border-t border-[#1e1e20] bg-[#070709] px-5 py-4">
+              <p class="text-sm leading-relaxed text-zinc-400">A <strong class="text-white">3-lug (or 4-lug) twist-lock cartridge</strong> uses a bayonet-style flange with locking ears spaced 120&deg; (or 90&deg;) apart. The cartridge is inserted into the tube-sheet and rotated a quarter-turn to lock&mdash;no tools required. This design is used primarily in <strong class="text-white">Farr Tenkay&reg;</strong> and <strong class="text-white">Camfil&reg;</strong> collectors, as well as some Nordson&reg; and AAF&reg; configurations. We build direct drop-in replacements in nanofiber, spunbond, and cellulose-blend media.</p>
+            </div>
+          </div>
+          <div class="overflow-hidden rounded-lg border border-[#1e1e20]">
+            <button onclick="mhfToggleFaq(this)" class="flex w-full items-start justify-between gap-4 px-5 py-4 text-left transition hover:bg-[#111113]">
+              <span class="text-sm font-semibold leading-snug text-white">Can you supply oval cartridges for non-round pleated dust collectors?</span>
+              <svg class="mhf-faq-icon mt-0.5 h-4 w-4 shrink-0 text-zinc-600 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div class="mhf-faq-answer hidden border-t border-[#1e1e20] bg-[#070709] px-5 py-4">
+              <p class="text-sm leading-relaxed text-zinc-400">Yes. We supply <strong class="text-white">BCSOVSB</strong> (spunbond) and <strong class="text-white">BCSOVNF</strong> (nanofiber) oval cartridges in the standard 11.4&rdquo;&times;14.4&rdquo;&times;26&rdquo; profile as well as custom oval dimensions. Oval cartridges use an expanded metal outer cage and wide-pleat design for maximum filter area in a compact footprint. Submit your collector model number or existing cartridge dimensions and we will confirm an exact match.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="border-b border-line bg-surface">
       <div class="mx-auto max-w-6xl px-4 py-10 sm:px-8 flex flex-col items-center gap-4 text-center sm:flex-row sm:justify-between sm:text-left">
         <div>
-          <p class="text-sm font-semibold text-white">Have a part number? We'll cross-reference it instantly.</p>
+          <p class="text-sm font-semibold text-white">Have a part number? We&rsquo;ll cross-reference it instantly.</p>
           <p class="mt-1 text-xs text-muted">Hood River, OR &bull; (541) 275-0340 &bull; info@mounthoodfiltration.com</p>
         </div>
         <a href="index.html" class="shrink-0 rounded-md bg-white px-5 py-2.5 text-xs font-bold tracking-wider text-black uppercase transition hover:bg-neutral-200">Request a Quote &rarr;</a>
@@ -134,5 +282,15 @@
   </footer>
 
   <script src="assets/quick-contact.js"></script>
+  <script>
+    function mhfToggleFaq(btn) {
+      var answer = btn.nextElementSibling;
+      var icon = btn.querySelector('.mhf-faq-icon');
+      var isOpen = !answer.classList.contains('hidden');
+      document.querySelectorAll('.mhf-faq-answer').forEach(function(el) { el.classList.add('hidden'); });
+      document.querySelectorAll('.mhf-faq-icon').forEach(function(el) { el.style.transform = ''; });
+      if (!isOpen) { answer.classList.remove('hidden'); if (icon) icon.style.transform = 'rotate(180deg)'; }
+    }
+  </script>
 </body>
 </html>

@@ -58,6 +58,54 @@
     }
   ]
   </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Can you source OEM-equivalent filter bags for any dust collector brand?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Mount Hood Filtration sources and manufactures OEM-equivalent filter bags for 75+ dust collector brands including Donaldson Torit\u00ae, Camfil Farr\u00ae, MikroPul\u00ae, Wheelabrator\u00ae, Sly\u00ae, Standard Havens\u00ae, Gencor\u00ae, Astec\u00ae, BHA\u00ae, and many more. We match exact tube-sheet dimensions, media specification, and end construction\u2014including hard-to-find or discontinued part numbers."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What filter bag media should I use for high-temperature applications?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "For high-temperature applications, Nomex\u00ae (Aramid) is rated to 400\u00b0F and suits hot-mix asphalt plants, foundries, and cement kilns. PTFE (Teflon\u00ae) and woven fiberglass handle up to 500\u00b0F for boilers, incinerators, and extreme chemical environments. P84\u00ae polyimide is rated to 500\u00b0F with superior chemical resistance. Our engineers help match the right media to your exact gas temperature, moisture, and dust chemistry."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you also carry wire cages, cartridge filters, pulse-jet valves, and field services?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes\u2014Mount Hood Filtration is a full-line industrial filtration supplier. In addition to filter bags, we supply custom and OEM-replacement wire cages (oval, round, snap-ring, and split), pleated dust collector cartridges (open\/open, open\/closed, 3-lug twist-lock, and oval profiles), pulse-jet diaphragm valves and rebuild kits (Goyen\u00ae, ASCO\u00ae, Mecair\u00ae, Turbo\u2122), solenoid pilot coils, sequential timer boards, and nationwide baghouse field service crews for bag change-outs, UV fluorescent leak audits, and emergency shutdowns."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can you match a discontinued or hard-to-find filter bag part number?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Our engineering team cross-references discontinued OEM part numbers, works from physical sample bags, and reverse-engineers specs from tube-sheet dimensions and collector model numbers. Submit any part number, model reference, or physical sample and we will confirm an exact replacement or best-fit alternative\u2014usually within the same business day."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you offer nationwide baghouse field service crews?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Mount Hood Filtration deploys field crews nationwide for turnkey baghouse filter bag change-outs, wire cage upgrades, fluorescent UV dust leak audits, ultrasonic cleaning, tubesheet inspections, and emergency shutdown dispatch. Crews work planned outage windows as well as weekend and off-shift schedules."
+        }
+      }
+    ]
+  }
+  </script>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -225,7 +273,7 @@
                     oninput="handleSearchInput(this.value)"
                     onfocus="handleSearchInput(this.value)"
                     onkeydown="if(event.key==='Enter'){event.preventDefault();launchFromSearchInput();}"
-                    placeholder="Search by OEM Brand or Part #..."
+                    placeholder="Search filter bags, cartridges, cages, pulse valves, or OEM part # (e.g., Torit, MikroPul, Goyen)..."
                     class="w-full bg-transparent px-3 py-2 text-xs text-white placeholder-muted/70 focus:outline-none sm:text-sm"
                   />
                 </div>
@@ -480,6 +528,93 @@
           </div>
         </div>
       </section>
+
+      <!-- OEM SYSTEMS & COLLECTORS STRIP -->
+      <section class="border-t border-[#1a1a1c] bg-[#070709]">
+        <div class="mx-auto max-w-6xl px-4 py-10 sm:px-8">
+          <div class="mb-5 flex items-center gap-2.5">
+            <span class="h-1.5 w-1.5 rounded-full bg-[#2ea836]"></span>
+            <h2 class="font-mono text-[11px] font-bold tracking-widest text-white uppercase">OEM Systems &amp; Collectors We Source For</h2>
+          </div>
+          <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            <div>
+              <p class="mb-2 font-mono text-[9px] font-bold tracking-widest text-[#2ea836] uppercase">Collectors &amp; OEMs</p>
+              <p class="font-mono text-[11px] leading-relaxed text-zinc-600">Donaldson Torit&reg; &bull; Camfil Farr&reg; &bull; MikroPul&reg; &bull; Wheelabrator&reg; &bull; Sly&reg; &bull; Pneumafil&reg; &bull; Mac Process&reg; &bull; Schenck&reg; &bull; Nordfab&reg; &bull; BHA&reg;</p>
+            </div>
+            <div>
+              <p class="mb-2 font-mono text-[9px] font-bold tracking-widest text-[#2ea836] uppercase">Valves &amp; Controls</p>
+              <p class="font-mono text-[11px] leading-relaxed text-zinc-600">Goyen&reg; &bull; ASCO&reg; &bull; Mecair&reg; &bull; Turbo&reg; &bull; Autel&reg;</p>
+            </div>
+            <div>
+              <p class="mb-2 font-mono text-[9px] font-bold tracking-widest text-[#2ea836] uppercase">Filter Media &amp; Fabrics</p>
+              <p class="font-mono text-[11px] leading-relaxed text-zinc-600">Polyester &bull; Nomex&reg; (Aramid) &bull; Ryton&reg; (PPS) &bull; P84&reg; &bull; Fiberglass &bull; ePTFE Membrane &bull; Spunbond &bull; Nanofiber &bull; Cellulose/Poly Blends</p>
+            </div>
+            <div>
+              <p class="mb-2 font-mono text-[9px] font-bold tracking-widest text-[#2ea836] uppercase">Industries Served</p>
+              <p class="font-mono text-[11px] leading-relaxed text-zinc-600">Mining &amp; Aggregate &bull; Cement &amp; Lime &bull; Wood &amp; Lumber &bull; Grain &amp; Feed &bull; Metalworking &amp; Laser/Plasma &bull; Asphalt &bull; Chemical &amp; Powder Processing</p>
+            </div>
+          </div>
+          <p class="mt-5 font-mono text-[10px] text-zinc-700">All OEM names and part numbers are used for cross-reference and sourcing identification only. Mount Hood Filtration is an independent supplier and is not affiliated with the brands listed above.</p>
+        </div>
+      </section>
+
+      <!-- FAQ ACCORDION -->
+      <section class="border-t border-[#1a1a1c] bg-[#0a0a0c]">
+        <div class="mx-auto max-w-4xl px-4 py-14 sm:px-8">
+          <div class="mb-7 flex items-center gap-2.5">
+            <span class="h-1.5 w-1.5 rounded-full bg-[#2ea836]"></span>
+            <h2 class="font-mono text-[11px] font-bold tracking-widest text-white uppercase">Frequently Asked Questions</h2>
+          </div>
+          <div class="space-y-2">
+            <div class="overflow-hidden rounded-lg border border-[#1e1e20]">
+              <button onclick="mhfToggleFaq(this)" class="flex w-full items-start justify-between gap-4 px-5 py-4 text-left transition hover:bg-[#111113]">
+                <span class="text-sm font-semibold leading-snug text-white">Can you source OEM-equivalent filter bags for any dust collector brand?</span>
+                <svg class="mhf-faq-icon mt-0.5 h-4 w-4 shrink-0 text-zinc-600 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+              </button>
+              <div class="mhf-faq-answer hidden border-t border-[#1e1e20] bg-[#070709] px-5 py-4">
+                <p class="text-sm leading-relaxed text-zinc-400">Yes. We source and manufacture OEM-equivalent filter bags for 75+ collector brands including Donaldson Torit&reg;, Camfil Farr&reg;, MikroPul&reg;, Wheelabrator&reg;, Sly&reg;, Standard Havens&reg;, Gencor&reg;, Astec&reg;, BHA&reg;, and many more. We match exact tube-sheet dimensions, media specification, and end construction&mdash;including hard-to-find and discontinued part numbers. Submit a part number or collector model and we&rsquo;ll confirm a fit same day.</p>
+              </div>
+            </div>
+            <div class="overflow-hidden rounded-lg border border-[#1e1e20]">
+              <button onclick="mhfToggleFaq(this)" class="flex w-full items-start justify-between gap-4 px-5 py-4 text-left transition hover:bg-[#111113]">
+                <span class="text-sm font-semibold leading-snug text-white">What&rsquo;s the difference between pulse-jet, shaker, and reverse-air filter bags?</span>
+                <svg class="mhf-faq-icon mt-0.5 h-4 w-4 shrink-0 text-zinc-600 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+              </button>
+              <div class="mhf-faq-answer hidden border-t border-[#1e1e20] bg-[#070709] px-5 py-4">
+                <p class="text-sm leading-relaxed text-zinc-400"><strong class="text-white">Pulse-jet bags</strong> use a compressed-air pulse to knock dust off the outside of the bag; they need a wire cage for support and have snap-band, flange, or ring tops. <strong class="text-white">Shaker bags</strong> are cleaned by mechanical vibration and use loop, strap, or grommet tops&mdash;no cage required. <strong class="text-white">Reverse-air bags</strong> are cleaned by temporarily reversing airflow and require internal anti-collapse rings at intervals to prevent inward buckling. We manufacture all three types in any media to exact OEM specifications.</p>
+              </div>
+            </div>
+            <div class="overflow-hidden rounded-lg border border-[#1e1e20]">
+              <button onclick="mhfToggleFaq(this)" class="flex w-full items-start justify-between gap-4 px-5 py-4 text-left transition hover:bg-[#111113]">
+                <span class="text-sm font-semibold leading-snug text-white">What filter media should I use for high-temperature or corrosive dust?</span>
+                <svg class="mhf-faq-icon mt-0.5 h-4 w-4 shrink-0 text-zinc-600 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+              </button>
+              <div class="mhf-faq-answer hidden border-t border-[#1e1e20] bg-[#070709] px-5 py-4">
+                <p class="text-sm leading-relaxed text-zinc-400">Common high-temperature media: <strong class="text-white">Nomex&reg; (Aramid) to 400&deg;F</strong>&mdash;asphalt plants, foundries, cement kilns. <strong class="text-white">PTFE/Teflon&reg; &amp; woven fiberglass to 500&deg;F</strong>&mdash;boilers, incinerators, chemical processing. <strong class="text-white">P84&reg; polyimide to 500&deg;F</strong>&mdash;extreme chemical and sub-micron environments. <strong class="text-white">PPS/Ryton&reg; to 375&deg;F</strong>&mdash;acidic gas streams. For standard dry-dust applications under 275&deg;F, polyester felt is the cost-effective baseline. Not sure? Our engineering team will spec the right media from your gas temperature, moisture dewpoint, and dust chemistry.</p>
+              </div>
+            </div>
+            <div class="overflow-hidden rounded-lg border border-[#1e1e20]">
+              <button onclick="mhfToggleFaq(this)" class="flex w-full items-start justify-between gap-4 px-5 py-4 text-left transition hover:bg-[#111113]">
+                <span class="text-sm font-semibold leading-snug text-white">Can you match a discontinued or hard-to-find filter bag part number?</span>
+                <svg class="mhf-faq-icon mt-0.5 h-4 w-4 shrink-0 text-zinc-600 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+              </button>
+              <div class="mhf-faq-answer hidden border-t border-[#1e1e20] bg-[#070709] px-5 py-4">
+                <p class="text-sm leading-relaxed text-zinc-400">Absolutely. Our team cross-references discontinued OEM part numbers, works from physical sample bags, and reverse-engineers specs from tube-sheet bore dimensions and collector model numbers. Submit any part number, model reference, or mail us a sample bag and we will confirm an exact replacement or closest-fit alternative&mdash;usually within the same business day.</p>
+              </div>
+            </div>
+            <div class="overflow-hidden rounded-lg border border-[#1e1e20]">
+              <button onclick="mhfToggleFaq(this)" class="flex w-full items-start justify-between gap-4 px-5 py-4 text-left transition hover:bg-[#111113]">
+                <span class="text-sm font-semibold leading-snug text-white">Do you offer nationwide baghouse field service and change-out crews?</span>
+                <svg class="mhf-faq-icon mt-0.5 h-4 w-4 shrink-0 text-zinc-600 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+              </button>
+              <div class="mhf-faq-answer hidden border-t border-[#1e1e20] bg-[#070709] px-5 py-4">
+                <p class="text-sm leading-relaxed text-zinc-400">Yes. We deploy field crews nationwide for turnkey baghouse filter bag change-outs, wire cage upgrades, fluorescent UV dust leak audits, ultrasonic cleaning, tubesheet inspections, and emergency shutdown dispatch. Crews work planned outage windows as well as weekend and off-shift schedules. Contact us to schedule a site assessment or mobilize a rapid-response crew.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
     </div>
 
     <!-- =================================================================== -->
@@ -2087,6 +2222,16 @@
         return;
       }
 
+      // Fuzzy / typo-tolerant page routing
+      const pageRoutes = [
+        { re: /cartir|cartrid|cartrige|cartrige|pleated.cart|cart.*filter|filter.*cart|cartrige/, href: 'cartridges.html' },
+        { re: /\bcage\b|venturi|oval.cage|cage.oval|wire.cage|snap.ring(?!.bag)|snapring/, href: 'cages.html' },
+        { re: /\bservice\b|field.serv|change.?out|changeout|outage|leak.test|blacklight|uv.dust|bag.chang|emergenc|shutdown/, href: 'field-services.html' },
+        { re: /\bvalv|diaphragm|solenoid|pulse.?valve|timer.board|repair.kit|goyen|mecair|taeha|\basco\b/, href: 'valves.html' },
+      ];
+      const matchedPage = pageRoutes.find(function(r) { return r.re.test(lower); });
+      if (matchedPage) { window.location.href = matchedPage.href; return; }
+      // OEM / part number matching → open quote drawer
       const matchedOem = collectorOemGridList.find((o) => o.toLowerCase() === lower || lower.includes(o.toLowerCase()));
       if (matchedOem) {
         openQuoteDrawer({ mode: 'bags', oem: matchedOem, note: lower === matchedOem.toLowerCase() ? '' : `Part / Ref: ${raw}` });
@@ -2598,6 +2743,15 @@
         console.error('Copy failed:', err);
       }
       document.body.removeChild(tempArea);
+    }
+
+    function mhfToggleFaq(btn) {
+      var answer = btn.nextElementSibling;
+      var icon = btn.querySelector('.mhf-faq-icon');
+      var isOpen = !answer.classList.contains('hidden');
+      document.querySelectorAll('.mhf-faq-answer').forEach(function(el) { el.classList.add('hidden'); });
+      document.querySelectorAll('.mhf-faq-icon').forEach(function(el) { el.style.transform = ''; });
+      if (!isOpen) { answer.classList.remove('hidden'); if (icon) icon.style.transform = 'rotate(180deg)'; }
     }
 
     document.addEventListener('DOMContentLoaded', () => {
