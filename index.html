@@ -819,86 +819,256 @@
       </div>
 
       <div class="mx-auto max-w-6xl px-4 py-14 sm:px-8">
-        <!-- Brand Lineup Cards -->
-        <div class="mb-6 flex flex-col justify-between gap-2 border-b border-line pb-4 sm:flex-row sm:items-end">
+        <!-- 4 Product-Type Cards with CAD SVG Schematics -->
+        <div class="mb-8 flex flex-col justify-between gap-2 border-b border-line pb-4 sm:flex-row sm:items-end">
           <div>
-            <p class="font-mono text-[11px] tracking-widest text-muted uppercase">01 // Supported Valve &amp; Control Lines</p>
-            <h2 class="mt-1 text-xl font-bold text-white sm:text-2xl">Select Brand or Enter Any Part Number</h2>
+            <h2 class="mt-1 text-xl font-bold text-white sm:text-2xl">Pulse-Jet Valve &amp; Control Components</h2>
+            <p class="mt-1 text-xs text-muted">Click any card to configure a quick-quote &mdash; or enter any part number above.</p>
           </div>
-          <span class="font-mono text-xs text-muted">Original OEM &amp; Cost-Saving Aftermarket Options</span>
+          <span class="font-mono text-xs text-muted">OEM &amp; Cost-Saving Aftermarket</span>
         </div>
 
-        <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          <button onclick="openQuoteDrawer({ mode: 'valves', valveBrand: 'Goyen® (Original / Replacement)' })" class="group flex flex-col justify-between rounded-xl border border-line bg-surface p-5 text-left transition hover:border-white">
-            <div>
-              <span class="font-mono text-[11px] text-muted uppercase">ORIGINAL &amp; REPLACEMENT</span>
-              <h3 class="mt-2 text-base font-bold text-white">Goyen&reg; Pulse Valves &amp; Kits</h3>
-              <p class="mt-2 text-xs leading-relaxed text-muted">
-                RCA/CA threaded &amp; dresser-nut valves, remote pilot solenoids, and diaphragm rebuild kits (RCA25T000, RCA45T000, K2501, K4502, RCA3D2).
-              </p>
+        <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+
+          <!-- Card 01: Diaphragm Pulse Valves -->
+          <button onclick="openQuoteDrawer({ mode: 'valves', valveBrand: 'Goyen® (Original / Replacement)' })" class="group min-h-[390px] flex flex-col justify-between overflow-hidden p-0 rounded-2xl border border-white/10 bg-[#111113] text-left transition hover:border-white">
+            <div class="p-5 pb-3">
+              <div class="flex items-center justify-between">
+                <span class="font-mono text-[11px] font-bold text-white">01</span>
+                <svg class="h-5 w-5 text-white/70" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="8" width="11" height="10" rx="1"/><line x1="14" y1="12" x2="20" y2="12"/><rect x="10" y="3" width="6" height="5" rx="1"/></svg>
+              </div>
+              <h3 class="mt-3 text-base font-bold text-white">Diaphragm Pulse Valves</h3>
+              <p class="mt-2 text-xs leading-relaxed text-muted">Right-angle pulse-jet diaphragm valves, 3/4&quot; to 3&quot; NPT &amp; Dresser. OEM and aftermarket for Goyen&reg;, ASCO&reg;, Turbo&trade;, Mecair&reg;.</p>
+              <ul class="mt-3 space-y-0.5">
+                <li class="font-mono text-[11px] text-muted">3/4&quot; &ndash; 3&quot; NPT &amp; Dresser</li>
+                <li class="font-mono text-[11px] text-muted">Integral &amp; Remote Pilot</li>
+                <li class="font-mono text-[11px] text-muted">Goyen&reg;, ASCO&reg;, Mecair&reg;, Turbo&trade;</li>
+              </ul>
             </div>
-            <span class="mt-5 font-mono text-[11px] font-semibold text-muted group-hover:text-white">Enter Goyen Part # &rarr;</span>
+            <div class="relative h-52 w-full overflow-hidden bg-[#0c0c0e] border-t border-white/5 flex items-center justify-center p-3">
+              <svg viewBox="0 0 200 130" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-full max-h-44">
+                <line x1="0" y1="65" x2="200" y2="65" stroke="#3f3f46" stroke-width="0.4" stroke-dasharray="4,4"/>
+                <line x1="100" y1="0" x2="100" y2="130" stroke="#3f3f46" stroke-width="0.4" stroke-dasharray="4,4"/>
+                <!-- valve body -->
+                <rect x="28" y="38" width="92" height="52" rx="2" fill="none" stroke="#e4e4e7" stroke-width="1.2"/>
+                <!-- pilot solenoid top -->
+                <rect x="88" y="10" width="22" height="28" rx="2" fill="none" stroke="#e4e4e7" stroke-width="1"/>
+                <line x1="92" y1="14" x2="92" y2="34" stroke="#3f3f46" stroke-width="0.6"/><line x1="96" y1="14" x2="96" y2="34" stroke="#3f3f46" stroke-width="0.6"/>
+                <line x1="100" y1="14" x2="100" y2="34" stroke="#3f3f46" stroke-width="0.6"/><line x1="104" y1="14" x2="104" y2="34" stroke="#3f3f46" stroke-width="0.6"/>
+                <line x1="108" y1="14" x2="108" y2="34" stroke="#3f3f46" stroke-width="0.6"/>
+                <text x="99" y="8" text-anchor="middle" font-family="monospace" font-size="5" fill="#2ea836" letter-spacing="0.5">PILOT</text>
+                <!-- diaphragm (green) -->
+                <line x1="28" y1="60" x2="120" y2="60" stroke="#2ea836" stroke-width="1.6"/>
+                <text x="74" y="56" text-anchor="middle" font-family="monospace" font-size="5" fill="#2ea836">DIAPHRAGM</text>
+                <!-- inlet port left -->
+                <line x1="4" y1="50" x2="28" y2="50" stroke="#e4e4e7" stroke-width="1"/>
+                <line x1="4" y1="76" x2="28" y2="76" stroke="#e4e4e7" stroke-width="1"/>
+                <line x1="4" y1="50" x2="4" y2="76" stroke="#e4e4e7" stroke-width="1"/>
+                <line x1="9" y1="50" x2="9" y2="76" stroke="#3f3f46" stroke-width="0.5"/>
+                <line x1="14" y1="50" x2="14" y2="76" stroke="#3f3f46" stroke-width="0.5"/>
+                <line x1="19" y1="50" x2="19" y2="76" stroke="#3f3f46" stroke-width="0.5"/>
+                <line x1="24" y1="50" x2="24" y2="76" stroke="#3f3f46" stroke-width="0.5"/>
+                <text x="2" y="47" font-family="monospace" font-size="5" fill="#a1a1aa">INLET</text>
+                <!-- outlet port bottom -->
+                <line x1="82" y1="90" x2="82" y2="126" stroke="#e4e4e7" stroke-width="1"/>
+                <line x1="108" y1="90" x2="108" y2="126" stroke="#e4e4e7" stroke-width="1"/>
+                <line x1="82" y1="126" x2="108" y2="126" stroke="#e4e4e7" stroke-width="1"/>
+                <line x1="82" y1="118" x2="108" y2="118" stroke="#3f3f46" stroke-width="0.5"/>
+                <line x1="82" y1="122" x2="108" y2="122" stroke="#3f3f46" stroke-width="0.5"/>
+                <text x="95" y="124" text-anchor="middle" font-family="monospace" font-size="5" fill="#a1a1aa">OUTLET</text>
+                <!-- pulse arrow -->
+                <line x1="120" y1="64" x2="152" y2="64" stroke="#2ea836" stroke-width="0.8" stroke-dasharray="3,2"/>
+                <polygon points="152,61 160,64 152,67" fill="#2ea836"/>
+                <text x="162" y="67" font-family="monospace" font-size="5" fill="#2ea836">JET</text>
+                <!-- size label -->
+                <text x="32" y="84" font-family="monospace" font-size="5.5" fill="#3f3f46">3/4&quot;&ndash;3&quot; NPT</text>
+              </svg>
+              <span class="absolute bottom-3 left-5 z-10 font-mono text-[11px] font-semibold text-white">Configure &rarr;</span>
+            </div>
           </button>
 
-          <button onclick="openQuoteDrawer({ mode: 'valves', valveBrand: 'ASCO® Replacements' })" class="group flex flex-col justify-between rounded-xl border border-line bg-surface p-5 text-left transition hover:border-white">
-            <div>
-              <span class="font-mono text-[11px] text-muted uppercase">DIRECT DROP-IN</span>
-              <h3 class="mt-2 text-base font-bold text-white">ASCO&reg; Replacements</h3>
-              <p class="mt-2 text-xs leading-relaxed text-muted">
-                Pulse-jet diaphragm valves, solenoid coils, and complete rebuild kits (K276886, K238870, 8353 series).
-              </p>
+          <!-- Card 02: Diaphragm Repair Kits -->
+          <button onclick="openQuoteDrawer({ mode: 'valves', valveBrand: 'Goyen® (Original / Replacement)', partNum: 'Repair Kit' })" class="group min-h-[390px] flex flex-col justify-between overflow-hidden p-0 rounded-2xl border border-white/10 bg-[#111113] text-left transition hover:border-white">
+            <div class="p-5 pb-3">
+              <div class="flex items-center justify-between">
+                <span class="font-mono text-[11px] font-bold text-white">02</span>
+                <svg class="h-5 w-5 text-white/70" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><ellipse cx="12" cy="7" rx="9" ry="3"/><ellipse cx="12" cy="17" rx="9" ry="3"/><line x1="3" y1="7" x2="3" y2="17"/><line x1="21" y1="7" x2="21" y2="17"/></svg>
+              </div>
+              <h3 class="mt-3 text-base font-bold text-white">Diaphragm Repair Kits</h3>
+              <p class="mt-2 text-xs leading-relaxed text-muted">Complete rebuild kits with primary &amp; secondary diaphragms, stainless springs, and seals in TPE, Buna-N, or High-Temp Viton.</p>
+              <ul class="mt-3 space-y-0.5">
+                <li class="font-mono text-[11px] text-muted">K2501, K4502 (Goyen&reg;)</li>
+                <li class="font-mono text-[11px] text-muted">K276886 (ASCO&reg;), DB114/C (Mecair&reg;)</li>
+                <li class="font-mono text-[11px] text-muted">TPE / Buna-N &amp; High-Temp Viton</li>
+              </ul>
             </div>
-            <span class="mt-5 font-mono text-[11px] font-semibold text-muted group-hover:text-white">Enter ASCO Part # &rarr;</span>
+            <div class="relative h-52 w-full overflow-hidden bg-[#0c0c0e] border-t border-white/5 flex items-center justify-center p-3">
+              <svg viewBox="0 0 200 130" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-full max-h-44">
+                <line x1="100" y1="0" x2="100" y2="130" stroke="#3f3f46" stroke-width="0.4" stroke-dasharray="4,4"/>
+                <!-- O-Ring -->
+                <ellipse cx="100" cy="10" rx="26" ry="5" fill="none" stroke="#2ea836" stroke-width="1.2"/>
+                <ellipse cx="100" cy="10" rx="20" ry="3" fill="none" stroke="#2ea836" stroke-width="0.5"/>
+                <text x="130" y="13" font-family="monospace" font-size="5" fill="#2ea836">O-RING</text>
+                <!-- Primary diaphragm -->
+                <ellipse cx="100" cy="36" rx="40" ry="8" fill="none" stroke="#e4e4e7" stroke-width="1.2"/>
+                <line x1="60" y1="36" x2="140" y2="36" stroke="#e4e4e7" stroke-width="0.5"/>
+                <text x="144" y="39" font-family="monospace" font-size="4.5" fill="#a1a1aa">PRIMARY</text>
+                <!-- Spring (zigzag) -->
+                <polyline points="76,50 82,56 88,50 94,56 100,50 106,56 112,50 118,56 124,50" stroke="#e4e4e7" stroke-width="1" fill="none"/>
+                <text x="144" y="57" font-family="monospace" font-size="4.5" fill="#a1a1aa">SS SPRING</text>
+                <!-- Secondary diaphragm -->
+                <ellipse cx="100" cy="74" rx="32" ry="6" fill="none" stroke="#e4e4e7" stroke-width="1"/>
+                <line x1="68" y1="74" x2="132" y2="74" stroke="#e4e4e7" stroke-width="0.5"/>
+                <text x="136" y="77" font-family="monospace" font-size="4.5" fill="#a1a1aa">SECONDARY</text>
+                <!-- Retainer -->
+                <ellipse cx="100" cy="98" rx="36" ry="8" fill="none" stroke="#e4e4e7" stroke-width="1.2"/>
+                <ellipse cx="100" cy="98" rx="22" ry="5" fill="none" stroke="#3f3f46" stroke-width="0.6" stroke-dasharray="3,2"/>
+                <text x="140" y="101" font-family="monospace" font-size="4.5" fill="#a1a1aa">RETAINER</text>
+                <!-- explode leader lines right -->
+                <line x1="140" y1="37" x2="143" y2="37" stroke="#3f3f46" stroke-width="0.5"/>
+                <line x1="140" y1="55" x2="143" y2="55" stroke="#3f3f46" stroke-width="0.5"/>
+                <line x1="132" y1="75" x2="135" y2="75" stroke="#3f3f46" stroke-width="0.5"/>
+                <line x1="136" y1="99" x2="139" y2="99" stroke="#3f3f46" stroke-width="0.5"/>
+                <!-- explode dashes between parts -->
+                <line x1="60" y1="18" x2="60" y2="28" stroke="#3f3f46" stroke-width="0.4" stroke-dasharray="2,2"/>
+                <line x1="60" y1="44" x2="60" y2="64" stroke="#3f3f46" stroke-width="0.4" stroke-dasharray="2,2"/>
+                <line x1="60" y1="80" x2="60" y2="90" stroke="#3f3f46" stroke-width="0.4" stroke-dasharray="2,2"/>
+                <text x="20" y="126" font-family="monospace" font-size="5" fill="#3f3f46">EXPLODED VIEW &mdash; KIT</text>
+              </svg>
+              <span class="absolute bottom-3 left-5 z-10 font-mono text-[11px] font-semibold text-white">Configure &rarr;</span>
+            </div>
           </button>
 
-          <button onclick="openQuoteDrawer({ mode: 'valves', valveBrand: 'Mecair® (Original / Replacement)' })" class="group flex flex-col justify-between rounded-xl border border-line bg-surface p-5 text-left transition hover:border-white">
-            <div>
-              <span class="font-mono text-[11px] text-muted uppercase">ORIGINAL &amp; REPLACEMENT</span>
-              <h3 class="mt-2 text-base font-bold text-white">Mecair&reg; Valves &amp; Diaphragms</h3>
-              <p class="mt-2 text-xs leading-relaxed text-muted">
-                VNP &amp; VEM series pulse valves, manifold assemblies, and DB-series diaphragm kits (DB114/C, DB116/C).
-              </p>
+          <!-- Card 03: Solenoid Pilot Valves & Coils -->
+          <button onclick="openQuoteDrawer({ mode: 'valves', valveBrand: 'ASCO® Replacements' })" class="group min-h-[390px] flex flex-col justify-between overflow-hidden p-0 rounded-2xl border border-white/10 bg-[#111113] text-left transition hover:border-white">
+            <div class="p-5 pb-3">
+              <div class="flex items-center justify-between">
+                <span class="font-mono text-[11px] font-bold text-white">03</span>
+                <svg class="h-5 w-5 text-white/70" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="6" y="5" width="12" height="11" rx="1"/><line x1="10" y1="2" x2="10" y2="5"/><line x1="14" y1="2" x2="14" y2="5"/><path d="M9 16v3M15 16v3"/></svg>
+              </div>
+              <h3 class="mt-3 text-base font-bold text-white">Solenoid Pilot Valves &amp; Coils</h3>
+              <p class="mt-2 text-xs leading-relaxed text-muted">NEMA 4 &amp; 4X rated pilot coil assemblies in 24V DC, 110/120V AC, 220V AC and explosion-proof options.</p>
+              <ul class="mt-3 space-y-0.5">
+                <li class="font-mono text-[11px] text-muted">24V DC / 110V&ndash;120V AC / 220V AC</li>
+                <li class="font-mono text-[11px] text-muted">NEMA 4 / NEMA 4X Enclosures</li>
+                <li class="font-mono text-[11px] text-muted">Expl.-Proof Class I Div. 1 Option</li>
+              </ul>
             </div>
-            <span class="mt-5 font-mono text-[11px] font-semibold text-muted group-hover:text-white">Enter Mecair Part # &rarr;</span>
+            <div class="relative h-52 w-full overflow-hidden bg-[#0c0c0e] border-t border-white/5 flex items-center justify-center p-3">
+              <svg viewBox="0 0 200 130" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-full max-h-44">
+                <!-- NEMA 4X housing -->
+                <rect x="52" y="18" width="96" height="82" rx="3" fill="none" stroke="#e4e4e7" stroke-width="1.2"/>
+                <!-- Coil winding -->
+                <rect x="68" y="30" width="64" height="42" rx="2" fill="none" stroke="#e4e4e7" stroke-width="0.9"/>
+                <line x1="70" y1="35" x2="130" y2="35" stroke="#3f3f46" stroke-width="0.6"/>
+                <line x1="70" y1="39" x2="130" y2="39" stroke="#3f3f46" stroke-width="0.6"/>
+                <line x1="70" y1="43" x2="130" y2="43" stroke="#3f3f46" stroke-width="0.6"/>
+                <line x1="70" y1="47" x2="130" y2="47" stroke="#3f3f46" stroke-width="0.6"/>
+                <line x1="70" y1="51" x2="130" y2="51" stroke="#3f3f46" stroke-width="0.6"/>
+                <line x1="70" y1="55" x2="130" y2="55" stroke="#3f3f46" stroke-width="0.6"/>
+                <line x1="70" y1="59" x2="130" y2="59" stroke="#3f3f46" stroke-width="0.6"/>
+                <line x1="70" y1="63" x2="130" y2="63" stroke="#3f3f46" stroke-width="0.6"/>
+                <!-- Core/plunger -->
+                <rect x="90" y="30" width="20" height="42" rx="1" fill="rgba(46,168,54,0.08)" stroke="#2ea836" stroke-width="0.9"/>
+                <text x="100" y="54" text-anchor="middle" font-family="monospace" font-size="5" fill="#2ea836">CORE</text>
+                <!-- electrical leads top -->
+                <line x1="86" y1="18" x2="78" y2="4" stroke="#e4e4e7" stroke-width="1"/>
+                <line x1="114" y1="18" x2="122" y2="4" stroke="#e4e4e7" stroke-width="1"/>
+                <text x="64" y="4" font-family="monospace" font-size="5.5" fill="#2ea836">24VDC / 120VAC</text>
+                <!-- port at bottom -->
+                <rect x="86" y="100" width="28" height="12" rx="1" fill="none" stroke="#e4e4e7" stroke-width="0.9"/>
+                <line x1="86" y1="103" x2="114" y2="103" stroke="#3f3f46" stroke-width="0.5"/>
+                <line x1="86" y1="107" x2="114" y2="107" stroke="#3f3f46" stroke-width="0.5"/>
+                <line x1="86" y1="111" x2="114" y2="111" stroke="#3f3f46" stroke-width="0.5"/>
+                <text x="100" y="124" text-anchor="middle" font-family="monospace" font-size="5" fill="#a1a1aa">1/4&quot; NPT PORT</text>
+                <!-- NEMA label -->
+                <text x="100" y="94" text-anchor="middle" font-family="monospace" font-size="5" fill="#3f3f46">NEMA 4 / 4X ENCL.</text>
+                <!-- conduit entries -->
+                <line x1="52" y1="44" x2="38" y2="44" stroke="#e4e4e7" stroke-width="0.8"/>
+                <text x="24" y="43" font-family="monospace" font-size="4.5" fill="#3f3f46" text-anchor="middle">COND</text>
+                <line x1="148" y1="44" x2="162" y2="44" stroke="#e4e4e7" stroke-width="0.8"/>
+                <text x="174" y="43" font-family="monospace" font-size="4.5" fill="#3f3f46" text-anchor="middle">COND</text>
+              </svg>
+              <span class="absolute bottom-3 left-5 z-10 font-mono text-[11px] font-semibold text-white">Configure &rarr;</span>
+            </div>
           </button>
 
-          <button onclick="openQuoteDrawer({ mode: 'valves', valveBrand: 'Taeha™ Replacements' })" class="group flex flex-col justify-between rounded-xl border border-line bg-surface p-5 text-left transition hover:border-white">
-            <div>
-              <span class="font-mono text-[11px] text-muted uppercase">REMOTE &amp; INTEGRAL PILOT</span>
-              <h3 class="mt-2 text-base font-bold text-white">Taeha&trade; Replacements</h3>
-              <p class="mt-2 text-xs leading-relaxed text-muted">
-                TH-series remote pilot and integral solenoid pulse valves &amp; diaphragm repair kits (TH-5440-B, TH-5425-B).
-              </p>
+          <!-- Card 04: Sequential Timer Boards -->
+          <button onclick="openQuoteDrawer({ mode: 'valves', valveBrand: 'Autel™ / Timer &amp; Controller Boards' })" class="group min-h-[390px] flex flex-col justify-between overflow-hidden p-0 rounded-2xl border border-white/10 bg-[#111113] text-left transition hover:border-white">
+            <div class="p-5 pb-3">
+              <div class="flex items-center justify-between">
+                <span class="font-mono text-[11px] font-bold text-white">04</span>
+                <svg class="h-5 w-5 text-white/70" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4" width="18" height="16" rx="1"/><line x1="7" y1="4" x2="7" y2="2"/><line x1="12" y1="4" x2="12" y2="2"/><line x1="17" y1="4" x2="17" y2="2"/><line x1="7" y1="20" x2="7" y2="22"/><line x1="12" y1="20" x2="12" y2="22"/><line x1="17" y1="20" x2="17" y2="22"/></svg>
+              </div>
+              <h3 class="mt-3 text-base font-bold text-white">Sequential Timer Boards</h3>
+              <p class="mt-2 text-xs leading-relaxed text-muted">Solid-state pulse controller boards in 6 to 32 channels, NEMA 4 enclosures, with adjustable on/off time and on-demand &Delta;P cleaning.</p>
+              <ul class="mt-3 space-y-0.5">
+                <li class="font-mono text-[11px] text-muted">6&ndash;32 Channels, Adjustable Timing</li>
+                <li class="font-mono text-[11px] text-muted">On-Demand &Delta;P Cleaning Mode</li>
+                <li class="font-mono text-[11px] text-muted">Autel&trade; &amp; Dwyer Controller Boards</li>
+              </ul>
             </div>
-            <span class="mt-5 font-mono text-[11px] font-semibold text-muted group-hover:text-white">Enter Taeha Part # &rarr;</span>
+            <div class="relative h-52 w-full overflow-hidden bg-[#0c0c0e] border-t border-white/5 flex items-center justify-center p-3">
+              <svg viewBox="0 0 200 130" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-full max-h-44">
+                <!-- PCB outline -->
+                <rect x="18" y="8" width="164" height="108" rx="2" fill="none" stroke="#e4e4e7" stroke-width="1.2"/>
+                <!-- Terminal strip -->
+                <rect x="28" y="14" width="144" height="15" rx="1" fill="none" stroke="#e4e4e7" stroke-width="0.8"/>
+                <!-- Power terminal (green) -->
+                <rect x="30" y="16" width="9" height="11" fill="rgba(46,168,54,0.15)" stroke="#2ea836" stroke-width="0.6"/>
+                <text x="34.5" y="24" text-anchor="middle" font-family="monospace" font-size="4" fill="#2ea836">PWR</text>
+                <rect x="40" y="16" width="9" height="11" fill="none" stroke="#3f3f46" stroke-width="0.5"/>
+                <text x="44.5" y="24" text-anchor="middle" font-family="monospace" font-size="4" fill="#a1a1aa">GND</text>
+                <!-- Channel terminals 1-8 -->
+                <rect x="52" y="16" width="8" height="11" fill="none" stroke="#3f3f46" stroke-width="0.5"/><text x="56" y="24" text-anchor="middle" font-family="monospace" font-size="4" fill="#a1a1aa">1</text>
+                <rect x="61" y="16" width="8" height="11" fill="none" stroke="#3f3f46" stroke-width="0.5"/><text x="65" y="24" text-anchor="middle" font-family="monospace" font-size="4" fill="#a1a1aa">2</text>
+                <rect x="70" y="16" width="8" height="11" fill="none" stroke="#3f3f46" stroke-width="0.5"/><text x="74" y="24" text-anchor="middle" font-family="monospace" font-size="4" fill="#a1a1aa">3</text>
+                <rect x="79" y="16" width="8" height="11" fill="none" stroke="#3f3f46" stroke-width="0.5"/><text x="83" y="24" text-anchor="middle" font-family="monospace" font-size="4" fill="#a1a1aa">4</text>
+                <rect x="88" y="16" width="8" height="11" fill="none" stroke="#3f3f46" stroke-width="0.5"/><text x="92" y="24" text-anchor="middle" font-family="monospace" font-size="4" fill="#a1a1aa">5</text>
+                <rect x="97" y="16" width="8" height="11" fill="none" stroke="#3f3f46" stroke-width="0.5"/><text x="101" y="24" text-anchor="middle" font-family="monospace" font-size="4" fill="#a1a1aa">6</text>
+                <rect x="106" y="16" width="8" height="11" fill="none" stroke="#3f3f46" stroke-width="0.5"/><text x="110" y="24" text-anchor="middle" font-family="monospace" font-size="4" fill="#a1a1aa">7</text>
+                <rect x="115" y="16" width="8" height="11" fill="none" stroke="#3f3f46" stroke-width="0.5"/><text x="119" y="24" text-anchor="middle" font-family="monospace" font-size="4" fill="#a1a1aa">8</text>
+                <text x="128" y="24" font-family="monospace" font-size="4" fill="#3f3f46">&hellip; CH 32</text>
+                <!-- Relay driver row -->
+                <rect x="28" y="36" width="144" height="18" rx="1" fill="none" stroke="#3f3f46" stroke-width="0.6"/>
+                <text x="100" y="48" text-anchor="middle" font-family="monospace" font-size="5" fill="#3f3f46">OUTPUT RELAY DRIVERS</text>
+                <!-- Setpoint pots -->
+                <text x="28" y="70" font-family="monospace" font-size="5" fill="#a1a1aa">ON-TIME</text>
+                <circle cx="64" cy="66" r="5" fill="none" stroke="#e4e4e7" stroke-width="0.8"/>
+                <line x1="64" y1="61" x2="64" y2="65" stroke="#2ea836" stroke-width="1.2"/>
+                <text x="80" y="70" font-family="monospace" font-size="5" fill="#a1a1aa">OFF-TIME</text>
+                <circle cx="116" cy="66" r="5" fill="none" stroke="#e4e4e7" stroke-width="0.8"/>
+                <line x1="116" y1="61" x2="118" y2="66" stroke="#2ea836" stroke-width="1.2"/>
+                <text x="132" y="70" font-family="monospace" font-size="5" fill="#a1a1aa">&Delta;P MODE</text>
+                <!-- Status LEDs -->
+                <circle cx="32" cy="84" r="3" fill="rgba(46,168,54,0.3)" stroke="#2ea836" stroke-width="0.8"/>
+                <circle cx="42" cy="84" r="3" fill="rgba(46,168,54,0.3)" stroke="#2ea836" stroke-width="0.8"/>
+                <text x="50" y="88" font-family="monospace" font-size="4.5" fill="#2ea836">PWR / STATUS</text>
+                <!-- Board label -->
+                <text x="100" y="103" text-anchor="middle" font-family="monospace" font-size="5.5" fill="#3f3f46">6&ndash;32 CH SOLID-STATE TIMER</text>
+                <!-- Mounting holes -->
+                <circle cx="23" cy="13" r="2" fill="none" stroke="#3f3f46" stroke-width="0.5"/>
+                <circle cx="177" cy="13" r="2" fill="none" stroke="#3f3f46" stroke-width="0.5"/>
+                <circle cx="23" cy="111" r="2" fill="none" stroke="#3f3f46" stroke-width="0.5"/>
+                <circle cx="177" cy="111" r="2" fill="none" stroke="#3f3f46" stroke-width="0.5"/>
+                <!-- Output leads -->
+                <line x1="55" y1="116" x2="55" y2="128" stroke="#e4e4e7" stroke-width="0.6"/>
+                <line x1="65" y1="116" x2="65" y2="128" stroke="#e4e4e7" stroke-width="0.6"/>
+                <line x1="75" y1="116" x2="75" y2="128" stroke="#e4e4e7" stroke-width="0.6"/>
+                <line x1="85" y1="116" x2="85" y2="128" stroke="#e4e4e7" stroke-width="0.6"/>
+                <line x1="95" y1="116" x2="95" y2="128" stroke="#e4e4e7" stroke-width="0.6"/>
+                <line x1="105" y1="116" x2="105" y2="128" stroke="#e4e4e7" stroke-width="0.6"/>
+                <text x="80" y="128" text-anchor="middle" font-family="monospace" font-size="4.5" fill="#3f3f46">SOLENOID OUTPUTS</text>
+              </svg>
+              <span class="absolute bottom-3 left-5 z-10 font-mono text-[11px] font-semibold text-white">Configure &rarr;</span>
+            </div>
           </button>
 
-          <button onclick="openQuoteDrawer({ mode: 'valves', valveBrand: 'Turbo™ Replacements' })" class="group flex flex-col justify-between rounded-xl border border-line bg-surface p-5 text-left transition hover:border-white">
-            <div>
-              <span class="font-mono text-[11px] text-muted uppercase">PULSE VALVES &amp; KITS</span>
-              <h3 class="mt-2 text-base font-bold text-white">Turbo&trade; Replacements</h3>
-              <p class="mt-2 text-xs leading-relaxed text-muted">
-                FP/FM pulse-jet valves and M-series diaphragm rebuild kits (M25, M40, M50).
-              </p>
-            </div>
-            <span class="mt-5 font-mono text-[11px] font-semibold text-muted group-hover:text-white">Enter Turbo Part # &rarr;</span>
-          </button>
-
-          <button onclick="openQuoteDrawer({ mode: 'valves', valveBrand: 'Autel™ / Timer & Controller Boards' })" class="group flex flex-col justify-between rounded-xl border border-line bg-surface p-5 text-left transition hover:border-white">
-            <div>
-              <span class="font-mono text-[11px] text-muted uppercase">SEQUENTIAL CONTROLS</span>
-              <h3 class="mt-2 text-base font-bold text-white">Timer &amp; Controller Boards</h3>
-              <p class="mt-2 text-xs leading-relaxed text-muted">
-                Autel&trade; &amp; Dwyer solid-state sequential timer boards, &Delta;P controllers, and NEMA 4 solenoid enclosures (3-8V8000-331).
-              </p>
-            </div>
-            <span class="mt-5 font-mono text-[11px] font-semibold text-muted group-hover:text-white">Enter Board Part # &rarr;</span>
-          </button>
         </div>
 
         <!-- High-Demand Part Number Quick-Select Grid -->
         <div class="mt-12">
-          <p class="mb-3 font-mono text-[11px] tracking-widest text-muted uppercase">02 // High-Demand Stock Part Numbers (Click to Quote)</p>
+          <p class="mb-3 font-mono text-[11px] tracking-widest text-muted uppercase">High-Demand Stock Part Numbers</p>
           <div class="grid grid-cols-2 gap-2.5 sm:grid-cols-3 md:grid-cols-5">
             <button onclick="openQuoteDrawer({ mode: 'valves', valveBrand: 'Goyen® (Original / Replacement)', partNum: 'RCA25T000' })" class="rounded-lg border border-line bg-surface p-3 text-left transition hover:border-white">
               <span class="block font-mono text-xs font-bold text-white">RCA25T000</span>
@@ -1246,12 +1416,12 @@
             </div>
 
             <div class="rounded-lg border border-line bg-pureBlack p-3">
-              <label for="qValvePartNum" class="mb-1 block font-mono text-[10px] font-semibold tracking-wider text-white uppercase">Part Number(s) *</label>
+              <label for="qValvePartNum" class="mb-1 block font-mono text-[10px] font-semibold tracking-wider text-white uppercase">Part Number or Port Size *</label>
               <input
                 id="qValvePartNum"
                 type="text"
                 oninput="updateWizardSummaryBadges()"
-                placeholder="e.g. RCA45T000, K2501, DB114/C, 3-8V8000-331"
+                placeholder="e.g. Goyen RCA25T, ASCO 8353, or 1-1/2&quot; NPT"
                 class="w-full rounded-md border border-line bg-surface px-2.5 py-2 font-mono text-xs text-white placeholder-muted/50 focus:border-white focus:outline-none"
               />
               <span class="mt-1.5 block font-mono text-[10px] text-muted">Enter pulse valve, diaphragm repair kit, solenoid, or timer board SKU(s).</span>
@@ -1514,30 +1684,31 @@
 
           <!-- Valves, Kits & Controller Boards Step 2 Controls -->
           <div id="step2ValveControls" class="hidden space-y-3.5">
-            <div class="relative">
-              <span class="mb-1 block font-mono text-[10px] font-semibold tracking-wider text-muted uppercase">OEM vs. Replacement Preference</span>
-              <input type="hidden" id="qValvePreference" value="Original OEM or Equivalent Replacement" />
-              <button type="button" onclick="toggleCustomDropdown('dd-valvePref')" class="flex w-full items-center justify-between rounded-md border border-line bg-pureBlack px-3 py-2 font-mono text-xs text-white transition hover:border-white">
-                <span id="ddLabel-valvePref">Original OEM or Equivalent Replacement</span>
-                <svg class="h-3.5 w-3.5 text-muted" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg>
-              </button>
-              <div id="dd-valvePref" class="custom-dd-menu absolute inset-x-0 z-30 mt-1 hidden rounded-md border border-line bg-pureBlack p-1 shadow-2xl">
-                <button type="button" onclick="pickCustomOption('qValvePreference', 'ddLabel-valvePref', 'Original OEM or Equivalent Replacement')" class="block w-full rounded px-2.5 py-1.5 text-left font-mono text-xs text-white hover:bg-surface">Original OEM or Equivalent Replacement</button>
-                <button type="button" onclick="pickCustomOption('qValvePreference', 'ddLabel-valvePref', 'Original OEM Only')" class="block w-full rounded px-2.5 py-1.5 text-left font-mono text-xs text-white hover:bg-surface">Original OEM Only</button>
-                <button type="button" onclick="pickCustomOption('qValvePreference', 'ddLabel-valvePref', 'Cost-Saving Aftermarket Replacement')" class="block w-full rounded px-2.5 py-1.5 text-left font-mono text-xs text-white hover:bg-surface">Cost-Saving Aftermarket Replacement</button>
-              </div>
+
+            <!-- 1: Connection & Size -->
+            <div>
+              <label for="qValveConn" class="mb-1 block font-mono text-[10px] font-semibold tracking-wider text-muted uppercase">Connection &amp; Size</label>
+              <select id="qValveConn" onchange="updateWizardSummaryBadges()" class="w-full rounded-md border border-line bg-pureBlack px-3 py-2 font-mono text-xs text-white focus:border-white focus:outline-none">
+                <option>3/4&quot; NPT / Dresser</option>
+                <option>1&quot; NPT / Dresser</option>
+                <option>1-1/2&quot; NPT / Dresser</option>
+                <option>2&quot; &ndash; 3&quot; NPT / Flange</option>
+                <option>Repair Kit / Timer Only</option>
+              </select>
             </div>
 
-            <div class="rounded-lg border border-line bg-pureBlack p-3">
-              <label for="qValveVoltage" class="mb-1 block font-mono text-[10px] font-semibold tracking-wider text-white uppercase">Voltage / Spec Notes</label>
-              <input
-                id="qValveVoltage"
-                type="text"
-                oninput="updateWizardSummaryBadges()"
-                placeholder="e.g. 120VAC, 24VDC, NEMA 4, Diaphragm Kit Only"
-                class="w-full rounded-md border border-line bg-surface px-2.5 py-2 font-mono text-xs text-white placeholder-muted/50 focus:border-white focus:outline-none"
-              />
+            <!-- 2: Elastomer & Voltage -->
+            <div>
+              <label for="qValveElast" class="mb-1 block font-mono text-[10px] font-semibold tracking-wider text-muted uppercase">Elastomer &amp; Voltage</label>
+              <select id="qValveElast" onchange="updateWizardSummaryBadges()" class="w-full rounded-md border border-line bg-pureBlack px-3 py-2 font-mono text-xs text-white focus:border-white focus:outline-none">
+                <option>Standard TPE / Buna-N &mdash; 110V/120V AC</option>
+                <option>Standard TPE / Buna-N &mdash; 24V DC</option>
+                <option>High-Temp Viton &mdash; 110V/120V AC</option>
+                <option>High-Temp Viton &mdash; 24V DC</option>
+                <option>No Clue &mdash; Just Match My Valve Model</option>
+              </select>
             </div>
+
           </div>
         </div>
 
@@ -2039,9 +2210,9 @@
 
     function getStep2SummaryText() {
       if (activeDrawerMode === 'valves') {
-        const pref = document.getElementById('qValvePreference')?.value || 'Original OEM or Equivalent Replacement';
-        const volt = document.getElementById('qValveVoltage')?.value.trim();
-        return volt ? `${pref} (${volt})` : pref;
+        const conn  = document.getElementById('qValveConn')?.value  || '1" NPT / Dresser';
+        const elast = document.getElementById('qValveElast')?.value || 'Standard TPE / Buna-N — 110V/120V AC';
+        return `${conn} · ${elast}`;
       }
       if (activeDrawerMode === 'bags') {
         const media = document.getElementById('qBagMedia')?.value || 'Polyester Felt 275°F';
@@ -2129,8 +2300,8 @@
           title: activeDrawerMode === 'valves' ? 'Select Brand & Part Number(s)' : 'Select Style & Collector'
         },
         2: {
-          counter: activeDrawerMode === 'valves' ? 'Step 2 of 3 // OEM Preference' : activeDrawerMode === 'cages' ? 'Step 2 of 3 // Cage Hardware' : 'Step 2 of 3 // Filter Media',
-          title: activeDrawerMode === 'valves' ? 'Select OEM Preference & Voltage' : activeDrawerMode === 'cages' ? 'Cage Hardware & Finish' : 'Select Filter Media'
+          counter: activeDrawerMode === 'valves' ? 'Step 2 of 3 // Connection & Elastomer' : activeDrawerMode === 'cages' ? 'Step 2 of 3 // Cage Hardware' : 'Step 2 of 3 // Filter Media',
+          title: activeDrawerMode === 'valves' ? 'Connection Size & Elastomer / Voltage' : activeDrawerMode === 'cages' ? 'Cage Hardware & Finish' : 'Select Filter Media'
         },
         3: { counter: 'Step 3 of 3 // Quantity & Contact', title: 'Quantity & Send RFQ' }
       };
@@ -2275,11 +2446,17 @@
       let subjectTag = '';
 
       if (activeDrawerMode === 'valves') {
-        const vBrand = document.getElementById('qValveBrand')?.value || 'Goyen® (Original / Replacement)';
+        const vBrand = document.getElementById('qValveBrand')?.value  || 'Goyen® (Original / Replacement)';
         const vPart  = document.getElementById('qValvePartNum')?.value.trim() || 'TBD';
-        const vPref  = document.getElementById('qValvePreference')?.value || 'Original OEM or Equivalent Replacement';
-        const vVolt  = document.getElementById('qValveVoltage')?.value.trim() || 'Standard / N/A';
-        specFields = { 'Division': 'VALVES, KITS & CONTROLLER BOARDS', 'Brand': vBrand, 'Part #(s)': vPart, 'Preference': vPref, 'Voltage / Spec': vVolt };
+        const vConn  = document.getElementById('qValveConn')?.value  || '1" NPT / Dresser';
+        const vElast = document.getElementById('qValveElast')?.value || 'Standard TPE / Buna-N — 110V/120V AC';
+        specFields = {
+          'Division':              'VALVES, KITS & CONTROLLER BOARDS',
+          'Brand':                 vBrand,
+          'Part # / Port Size':    vPart,
+          'Connection & Size':     vConn,
+          'Elastomer & Voltage':   vElast
+        };
         subjectTag = `${vBrand} [${vPart}]`;
       } else {
         const oem  = document.getElementById('qOemBadge')?.textContent.trim() || 'Other / Custom';
