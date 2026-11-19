@@ -134,10 +134,9 @@
             <span class="nav-indicator absolute inset-x-0 bottom-0 hidden h-[2px] bg-white"></span>
           </button>
 
-          <button id="topNav-services" onclick="switchMainView('services')" class="top-nav-link relative py-5 text-[13px] font-semibold tracking-wide transition">
+          <a href="field-services.html" class="top-nav-link relative py-5 text-[13px] font-semibold tracking-wide transition hover:text-white text-muted">
             <span>Field Services</span>
-            <span class="nav-indicator absolute inset-x-0 bottom-0 hidden h-[2px] bg-white"></span>
-          </button>
+          </a>
 
           <button id="topNav-about" onclick="switchMainView('about')" class="top-nav-link relative py-5 text-[13px] font-semibold tracking-wide transition">
             <span>About</span>
@@ -165,7 +164,7 @@
         <button onclick="switchMainView('cages'); toggleMobileMenu()" class="rounded-md px-3 py-2 text-left text-sm font-semibold text-white hover:bg-surface">Cages &amp; Venturis</button>
         <button onclick="switchMainView('cartridges'); toggleMobileMenu()" class="rounded-md px-3 py-2 text-left text-sm font-semibold text-white hover:bg-surface">Cartridges</button>
         <button onclick="switchMainView('valves'); toggleMobileMenu()" class="rounded-md px-3 py-2 text-left text-sm font-semibold text-white hover:bg-surface">Valves &amp; Kits</button>
-        <button onclick="switchMainView('services'); toggleMobileMenu()" class="rounded-md px-3 py-2 text-left text-sm font-semibold text-white hover:bg-surface">Field Services</button>
+        <a href="field-services.html" class="rounded-md px-3 py-2 text-left text-sm font-semibold text-white hover:bg-surface block">Field Services</a>
         <button onclick="switchMainView('about'); toggleMobileMenu()" class="rounded-md px-3 py-2 text-left text-sm font-semibold text-white hover:bg-surface">About</button>
       </div>
     </div>
@@ -1972,6 +1971,7 @@
     });
 
     function switchMainView(viewName) {
+      if (viewName === 'services') { window.location.href = 'field-services.html'; return; }
       activeMainView = viewName;
       document.querySelectorAll('.main-view').forEach((v) => v.classList.add('hidden'));
       const target = document.getElementById(`view-${viewName}`);
