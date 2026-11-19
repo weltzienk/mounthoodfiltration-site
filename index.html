@@ -268,7 +268,7 @@
       </section>
 
       <!-- SECTION 2 — VISUAL BAG TYPE CARDS (5 CLEAN TILES) -->
-      <section class="mx-auto max-w-6xl px-4 py-14 sm:px-8">
+      <section class="mx-auto max-w-6xl px-4 pt-14 pb-24 sm:px-8">
         <div class="mb-7 flex flex-col justify-between gap-2 border-b border-line pb-4 sm:flex-row sm:items-end">
           <div>
             <p class="font-mono text-[11px] tracking-widest text-muted uppercase">Section 01 // Construction Styles</p>
@@ -279,8 +279,8 @@
 
         <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
           <!-- Tile 1: Pulse-Jet Bags -->
-          <button onclick="openQuoteDrawer({ mode: 'bags', bagStyle: 'Pulse-Jet Bag' })" class="group flex flex-col justify-between rounded-xl border border-line bg-surface p-5 text-left transition hover:border-white">
-            <div>
+          <button onclick="openQuoteDrawer({ mode: 'bags', bagStyle: 'Pulse-Jet Bag' })" class="group min-h-[390px] flex flex-col justify-between rounded-xl border border-line bg-surface overflow-hidden p-0 text-left transition hover:border-white">
+            <div class="p-6 pb-4">
               <div class="flex items-center justify-between">
                 <span class="font-mono text-[11px] font-bold text-white">01</span>
                 <svg class="h-6 w-6 text-white/80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
@@ -294,12 +294,12 @@
                 Snap band, flange, ring top, or raw edge; 3-needle chain stitch with bottom wear cuffs.
               </p>
             </div>
-            <span class="mt-5 font-mono text-[11px] font-semibold text-muted group-hover:text-white">Configure &rarr;</span>
+            <span class="px-6 pb-5 font-mono text-[11px] font-semibold text-muted group-hover:text-white">Configure &rarr;</span>
           </button>
 
           <!-- Tile 2: Welded-Seam Bags -->
-          <button onclick="openQuoteDrawer({ mode: 'bags', bagStyle: 'Welded-Seam Bag', media: 'PTFE / Teflon® 500°F' })" class="group relative flex flex-col justify-between rounded-xl border border-line bg-surface overflow-hidden p-0 text-left transition hover:border-white">
-            <div class="p-6 pb-3">
+          <button onclick="openQuoteDrawer({ mode: 'bags', bagStyle: 'Welded-Seam Bag', media: 'PTFE / Teflon® 500°F' })" class="group relative min-h-[390px] flex flex-col justify-between rounded-xl border border-line bg-surface overflow-hidden p-0 text-left transition hover:border-white">
+            <div class="p-6 pb-4">
               <div class="flex items-center justify-between">
                 <span class="font-mono text-[11px] font-bold text-white">02</span>
                 <svg class="h-6 w-6 text-white/80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
@@ -313,16 +313,16 @@
                 100% fused vertical seams—zero needle holes for ultra-fine particulate.
               </p>
             </div>
-            <div class="relative h-24 w-full mt-2 overflow-hidden">
-              <img src="assets/images/WELDED%20BAG.png" alt="Welded-seam filter bag" class="w-full h-full object-cover object-center opacity-[0.36] group-hover:opacity-50 transition-all duration-500" style="filter: brightness(0.72) contrast(90%) saturate(85%);">
-              <div class="absolute inset-0 pointer-events-none" style="background: linear-gradient(to bottom, #111113 0%, rgba(17, 17, 19, 0.35) 45%, rgba(10, 10, 12, 0.88) 100%);"></div>
-              <span class="absolute bottom-4 left-6 z-10 font-mono text-[11px] font-semibold text-muted group-hover:text-white">Configure &rarr;</span>
+            <div class="h-40 w-full relative overflow-hidden">
+              <img src="assets/images/WELDED%20BAG.png" alt="Welded-seam filter bag" class="w-full h-full object-cover object-center opacity-[0.88] group-hover:opacity-100 group-hover:scale-105 transition-all duration-500" style="filter: contrast(104%) brightness(0.92);">
+              <div class="absolute inset-0 pointer-events-none" style="background: linear-gradient(to bottom, #111113 0%, rgba(17, 17, 19, 0.05) 22%, rgba(10, 10, 12, 0.12) 65%, rgba(10, 10, 12, 0.85) 100%);"></div>
+              <span class="absolute bottom-4 left-6 z-10 font-mono text-[11px] font-semibold text-white">Configure &rarr;</span>
             </div>
           </button>
 
           <!-- Tile 3: Shaker Bags -->
-          <button onclick="openQuoteDrawer({ mode: 'bags', bagStyle: 'Shaker Bag' })" class="group flex flex-col justify-between rounded-xl border border-line bg-surface p-5 text-left transition hover:border-white">
-            <div>
+          <button onclick="openQuoteDrawer({ mode: 'bags', bagStyle: 'Shaker Bag' })" class="group min-h-[390px] flex flex-col justify-between rounded-xl border border-line bg-surface overflow-hidden p-0 text-left transition hover:border-white">
+            <div class="p-6 pb-4">
               <div class="flex items-center justify-between">
                 <span class="font-mono text-[11px] font-bold text-white">03</span>
                 <svg class="h-6 w-6 text-white/80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
@@ -336,12 +336,12 @@
                 Loop, strap, grommet, or hanger tops with corded/reinforced cuffs.
               </p>
             </div>
-            <span class="mt-5 font-mono text-[11px] font-semibold text-muted group-hover:text-white">Configure &rarr;</span>
+            <span class="px-6 pb-5 font-mono text-[11px] font-semibold text-muted group-hover:text-white">Configure &rarr;</span>
           </button>
 
           <!-- Tile 4: Reverse-Air Bags -->
-          <button onclick="openQuoteDrawer({ mode: 'bags', bagStyle: 'Reverse-Air Bag' })" class="group flex flex-col justify-between rounded-xl border border-line bg-surface p-5 text-left transition hover:border-white">
-            <div>
+          <button onclick="openQuoteDrawer({ mode: 'bags', bagStyle: 'Reverse-Air Bag' })" class="group min-h-[390px] flex flex-col justify-between rounded-xl border border-line bg-surface overflow-hidden p-0 text-left transition hover:border-white">
+            <div class="p-6 pb-4">
               <div class="flex items-center justify-between">
                 <span class="font-mono text-[11px] font-bold text-white">04</span>
                 <svg class="h-6 w-6 text-white/80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
@@ -356,12 +356,12 @@
                 Mild or stainless steel anti-collapse rings; compression or beaded cuffs.
               </p>
             </div>
-            <span class="mt-5 font-mono text-[11px] font-semibold text-muted group-hover:text-white">Configure &rarr;</span>
+            <span class="px-6 pb-5 font-mono text-[11px] font-semibold text-muted group-hover:text-white">Configure &rarr;</span>
           </button>
 
           <!-- Tile 5: Custom & Discontinued Specs -->
-          <button onclick="openQuoteDrawer({ mode: 'bags', oem: 'Other / Custom' })" class="group flex flex-col justify-between rounded-xl border border-line bg-surface p-5 text-left transition hover:border-white">
-            <div>
+          <button onclick="openQuoteDrawer({ mode: 'bags', oem: 'Other / Custom' })" class="group min-h-[390px] flex flex-col justify-between rounded-xl border border-line bg-surface overflow-hidden p-0 text-left transition hover:border-white">
+            <div class="p-6 pb-4">
               <div class="flex items-center justify-between">
                 <span class="font-mono text-[11px] font-bold text-white">05</span>
                 <svg class="h-6 w-6 text-white/80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
@@ -374,7 +374,7 @@
                 Built from your custom diameter, length, end construction, or physical sample bag.
               </p>
             </div>
-            <span class="mt-5 font-mono text-[11px] font-semibold text-muted group-hover:text-white">Configure Custom &rarr;</span>
+            <span class="px-6 pb-5 font-mono text-[11px] font-semibold text-muted group-hover:text-white">Configure Custom &rarr;</span>
           </button>
         </div>
       </section>
