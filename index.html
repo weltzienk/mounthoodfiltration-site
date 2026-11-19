@@ -1304,8 +1304,36 @@
             </div>
           </div>
 
-          <!-- Unknown Dimensions Toggle -->
-          <label class="flex cursor-pointer items-start gap-2.5 rounded-lg border border-line bg-pureBlack px-3 py-2.5 transition hover:border-white/40">
+          <!-- OEM / Universal Part Number Block (Cartridges only) -->
+          <div id="wizStep1CartridgePartBlock" class="hidden rounded-xl border border-white/10 bg-[#111113] p-4 space-y-3">
+            <span class="block font-mono text-[10px] font-semibold tracking-wider text-white uppercase">OEM OR CROSS-REFERENCE PART NUMBER *</span>
+            <input
+              id="cartridgePartNumber"
+              type="text"
+              oninput="updateWizardSummaryBadges()"
+              placeholder="e.g. P191115, 211303-002, C16400..."
+              class="w-full rounded-md border border-line bg-surface px-2.5 py-2 font-mono text-xs text-white placeholder-muted/50 focus:border-white focus:outline-none"
+            />
+            <p class="font-mono text-[10px] leading-relaxed text-muted">Universal part numbers cross-reference directly to exact OD, length, pleat count, and endcap specs&mdash;no manual measurements required.</p>
+            <details>
+              <summary class="cursor-pointer font-mono text-[10px] font-semibold text-muted hover:text-white list-none select-none">
+                &#9654; Don&rsquo;t have a part number? Enter optional OD &times; Length
+              </summary>
+              <div class="mt-2 grid grid-cols-2 gap-2">
+                <div>
+                  <label for="qCartOptOD" class="mb-1 block font-mono text-[10px] text-muted uppercase">OD (Optional)</label>
+                  <input id="qCartOptOD" type="text" oninput="updateWizardSummaryBadges()" placeholder='e.g. 12.75"' class="w-full rounded-md border border-line bg-surface px-2.5 py-1.5 font-mono text-xs text-white placeholder-muted/50 focus:border-white focus:outline-none" />
+                </div>
+                <div>
+                  <label for="qCartOptLen" class="mb-1 block font-mono text-[10px] text-muted uppercase">Length (Optional)</label>
+                  <input id="qCartOptLen" type="text" oninput="updateWizardSummaryBadges()" placeholder='e.g. 26"' class="w-full rounded-md border border-line bg-surface px-2.5 py-1.5 font-mono text-xs text-white placeholder-muted/50 focus:border-white focus:outline-none" />
+                </div>
+              </div>
+            </details>
+          </div>
+
+          <!-- Unknown Dimensions Toggle (hidden for Cartridges, Services, Valves) -->
+          <label id="wizStep1UnknownDimsLabel" class="flex cursor-pointer items-start gap-2.5 rounded-lg border border-line bg-pureBlack px-3 py-2.5 transition hover:border-white/40">
             <input type="checkbox" id="qUnknownDims" onchange="toggleUnknownDims(this.checked)" class="mt-0.5 h-3.5 w-3.5 shrink-0 accent-white" />
             <span class="font-mono text-[11px] leading-relaxed text-muted">I don&rsquo;t have exact dimensions &mdash; cross-reference by OEM model or physical sample</span>
           </label>
@@ -1935,7 +1963,13 @@
       if (oemBlock) oemBlock.classList.toggle('hidden', activeDrawerMode === 'valves');
 
       const dimBlock = document.getElementById('wizStep1DimensionsBlock');
-      if (dimBlock) dimBlock.classList.toggle('hidden', activeDrawerMode === 'services' || activeDrawerMode === 'valves');
+      if (dimBlock) dimBlock.classList.toggle('hidden', activeDrawerMode === 'services' || activeDrawerMode === 'valves' || activeDrawerMode === 'cartridges');
+
+      const cartPartBlock = document.getElementById('wizStep1CartridgePartBlock');
+      if (cartPartBlock) cartPartBlock.classList.toggle('hidden', activeDrawerMode !== 'cartridges');
+
+      const unknownDimsLabel = document.getElementById('wizStep1UnknownDimsLabel');
+      if (unknownDimsLabel) unknownDimsLabel.classList.toggle('hidden', activeDrawerMode === 'services' || activeDrawerMode === 'valves' || activeDrawerMode === 'cartridges');
 
       const endConstBlock = document.getElementById('wizStep2EndConstBlock');
       if (endConstBlock) endConstBlock.classList.toggle('hidden', activeDrawerMode !== 'bags');
@@ -1959,6 +1993,15 @@
 
       const oem = document.getElementById('qOemBadge')?.textContent.trim() || 'Other / Custom';
       if (activeDrawerMode === 'services') return `${style} • ${oem}`;
+
+      if (activeDrawerMode === 'cartridges') {
+        const partNum = document.getElementById('cartridgePartNumber')?.value.trim();
+        const optOD = document.getElementById('qCartOptOD')?.value.trim();
+        const optLen = document.getElementById('qCartOptLen')?.value.trim();
+        const dimsStr = (optOD || optLen) ? `${optOD || '?'} × ${optLen || '?'}` : 'Per Universal Part Number';
+        if (partNum) return `${style} • ${oem} • Part #: ${partNum} (${dimsStr})`;
+        return `${style} • ${oem} (Dimensions TBD)`;
+      }
 
       const dia = document.getElementById('qDiameter')?.value.trim();
       const len = document.getElementById('qLength')?.value.trim();
@@ -2209,23 +2252,40 @@
         subjectTag = `${vBrand} [${vPart}]`;
       } else {
         const oem  = document.getElementById('qOemBadge')?.textContent.trim() || 'Other / Custom';
-        const dia  = document.getElementById('qDiameter')?.value.trim();
-        const len  = document.getElementById('qLength')?.value.trim();
-        const dims = (dia || len) ? `${dia || '?'} × ${len || '?'}` : 'TBD';
-        const fw   = activeDrawerMode === 'bags' ? (document.getElementById('qFabricWeight')?.value || null) : null;
-        const ends = activeDrawerMode === 'bags'
-          ? ((document.getElementById('qTopConst')?.value || 'Stainless Snap-Band') + ' / ' + (document.getElementById('qBottomConst')?.value || 'Standard Sewn Disc Bottom'))
-          : getStep2SummaryText();
-        specFields = {
-          'Division':    activeDrawerMode.toUpperCase(),
-          'Style':       getStep1SummaryText(),
-          'Media / Spec': document.getElementById('qBagMedia')?.value || getStep2SummaryText(),
-          'Collector OEM': oem,
-          'Dimensions':  dims,
-          'End Construction': ends,
-          ...(fw ? { 'Fabric Weight': fw } : {})
-        };
-        subjectTag = `${oem} [${dims}]`;
+
+        if (activeDrawerMode === 'cartridges') {
+          const partNum = document.getElementById('cartridgePartNumber')?.value.trim() || 'TBD';
+          const optOD = document.getElementById('qCartOptOD')?.value.trim();
+          const optLen = document.getElementById('qCartOptLen')?.value.trim();
+          const dims = (optOD || optLen) ? `${optOD || '?'} × ${optLen || '?'}` : 'Per Universal Part Number';
+          specFields = {
+            'Division':     'CARTRIDGES',
+            'Part Number':  partNum,
+            'Endcap Style': document.getElementById('qCartCap')?.value || 'Open / Closed w/ Bolt Hole',
+            'Filter Media': getStep2SummaryText(),
+            'Collector OEM': oem,
+            'Dimensions':   dims
+          };
+          subjectTag = `${oem} [Part #: ${partNum}]`;
+        } else {
+          const dia  = document.getElementById('qDiameter')?.value.trim();
+          const len  = document.getElementById('qLength')?.value.trim();
+          const dims = (dia || len) ? `${dia || '?'} × ${len || '?'}` : 'TBD';
+          const fw   = activeDrawerMode === 'bags' ? (document.getElementById('qFabricWeight')?.value || null) : null;
+          const ends = activeDrawerMode === 'bags'
+            ? ((document.getElementById('qTopConst')?.value || 'Stainless Snap-Band') + ' / ' + (document.getElementById('qBottomConst')?.value || 'Standard Sewn Disc Bottom'))
+            : getStep2SummaryText();
+          specFields = {
+            'Division':    activeDrawerMode.toUpperCase(),
+            'Style':       getStep1SummaryText(),
+            'Media / Spec': document.getElementById('qBagMedia')?.value || getStep2SummaryText(),
+            'Collector OEM': oem,
+            'Dimensions':  dims,
+            'End Construction': ends,
+            ...(fw ? { 'Fabric Weight': fw } : {})
+          };
+          subjectTag = `${oem} [${dims}]`;
+        }
       }
 
       const allFields = {
@@ -2281,7 +2341,7 @@
       }
 
       try {
-        const res  = await fetch('https://formsubmit.co/ajax/info@mounthoodfiltration.com', {
+        const res  = await fetch('https://formsubmit.co/ajax/43a25cb8b3fde5915648ce87075176cf', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
           body: JSON.stringify({
