@@ -1484,6 +1484,91 @@
             </div>
           </div>
         </div>
+
+        <!-- =============================================================== -->
+        <!-- STEP 3: QUANTITY & CONTACT                                       -->
+        <!-- =============================================================== -->
+        <div id="wizardPanel-3" class="wizard-panel hidden space-y-3.5">
+
+          <!-- Configuration Summary Card -->
+          <div class="rounded-xl border border-white/10 bg-[#111113] p-4">
+            <span class="mb-2 block font-mono text-[9px] font-semibold tracking-widest text-muted uppercase">Your Configuration</span>
+            <p id="step3ConfigLine" class="font-mono text-xs font-semibold text-white leading-snug"></p>
+            <p id="step3ConfigSub" class="mt-1 font-mono text-[10px] text-muted leading-snug"></p>
+            <button type="button" onclick="goToWizardStep(1)" class="mt-2 font-mono text-[10px] font-semibold text-muted transition hover:text-white">Edit Specs ↩</button>
+          </div>
+
+          <!-- Step 3 form fields -->
+          <div id="step3FormBody" class="space-y-3">
+
+            <!-- Qty + Ship Date -->
+            <div class="grid grid-cols-2 gap-2">
+              <div>
+                <label class="mb-1 block font-mono text-[9px] font-semibold tracking-widest text-muted uppercase">Estimated Qty *</label>
+                <input id="qQty" name="Estimated Quantity" type="number" min="1" required placeholder="100" class="w-full rounded-lg border border-line bg-pureBlack px-3 py-2.5 font-mono text-xs text-white placeholder-muted/50 focus:border-white focus:outline-none"/>
+              </div>
+              <div>
+                <label class="mb-1 block font-mono text-[9px] font-semibold tracking-widest text-muted uppercase">Target Ship Date</label>
+                <input id="qShipDate" name="Target Ship Date" type="text" placeholder="e.g. Dec 2026" class="w-full rounded-lg border border-line bg-pureBlack px-3 py-2.5 font-mono text-xs text-white placeholder-muted/50 focus:border-white focus:outline-none"/>
+              </div>
+            </div>
+
+            <!-- Name + Company -->
+            <div class="grid grid-cols-2 gap-2">
+              <div>
+                <label class="mb-1 block font-mono text-[9px] font-semibold tracking-widest text-muted uppercase">Full Name *</label>
+                <input id="qName" name="Full Name" type="text" required placeholder="Jane Smith" class="w-full rounded-lg border border-line bg-pureBlack px-3 py-2.5 font-mono text-xs text-white placeholder-muted/50 focus:border-white focus:outline-none"/>
+              </div>
+              <div>
+                <label class="mb-1 block font-mono text-[9px] font-semibold tracking-widest text-muted uppercase">Company *</label>
+                <input id="qCompany" name="Company / Plant Name" type="text" required placeholder="Acme Plant LLC" class="w-full rounded-lg border border-line bg-pureBlack px-3 py-2.5 font-mono text-xs text-white placeholder-muted/50 focus:border-white focus:outline-none"/>
+              </div>
+            </div>
+
+            <!-- Email -->
+            <div>
+              <label class="mb-1 block font-mono text-[9px] font-semibold tracking-widest text-muted uppercase">Work Email *</label>
+              <input id="qEmail" name="Work Email" type="email" required placeholder="jane@acmeplant.com" class="w-full rounded-lg border border-line bg-pureBlack px-3 py-2.5 font-mono text-xs text-white placeholder-muted/50 focus:border-white focus:outline-none"/>
+            </div>
+
+            <!-- Phone + Zip -->
+            <div class="grid grid-cols-2 gap-2">
+              <div>
+                <label class="mb-1 block font-mono text-[9px] font-semibold tracking-widest text-muted uppercase">Phone *</label>
+                <input id="qPhone" name="Phone Number" type="tel" required placeholder="503-555-0100" class="w-full rounded-lg border border-line bg-pureBlack px-3 py-2.5 font-mono text-xs text-white placeholder-muted/50 focus:border-white focus:outline-none"/>
+              </div>
+              <div>
+                <label class="mb-1 block font-mono text-[9px] font-semibold tracking-widest text-muted uppercase">Ship-To Zip</label>
+                <input id="qZip" name="Shipping Zip Code" type="text" placeholder="97031" class="w-full rounded-lg border border-line bg-pureBlack px-3 py-2.5 font-mono text-xs text-white placeholder-muted/50 focus:border-white focus:outline-none"/>
+              </div>
+            </div>
+
+            <!-- Notes -->
+            <div>
+              <label class="mb-1 block font-mono text-[9px] font-semibold tracking-widest text-muted uppercase">Additional Specs / Notes</label>
+              <textarea id="qNotes" name="Additional Notes" rows="3" placeholder="Part numbers, operating temp, special requirements..." class="w-full resize-none rounded-lg border border-line bg-pureBlack px-3 py-2.5 font-mono text-xs text-white placeholder-muted/50 focus:border-white focus:outline-none"></textarea>
+            </div>
+
+          </div><!-- /step3FormBody -->
+
+          <!-- Success / Error state -->
+          <div id="step3SuccessBody" class="hidden space-y-4 py-4 text-center">
+            <div id="step3ResultIcon" class="mx-auto flex h-14 w-14 items-center justify-center rounded-full border border-[#2ea836]/40 bg-[#2ea836]/10">
+              <svg class="h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="#2ea836" stroke-width="2.2"><path d="M5 13l4 4L19 7"/></svg>
+            </div>
+            <div>
+              <h3 id="step3ResultTitle" class="text-base font-bold text-white">RFQ Received</h3>
+              <p id="step3ResultMsg" class="mt-1 text-xs text-muted">Our engineering team will review your specs and follow up shortly.</p>
+            </div>
+            <div id="step3SuccessSummary" class="rounded-xl border border-white/10 bg-[#111113] p-3 text-left font-mono text-[10px] text-muted whitespace-pre-wrap"></div>
+            <div id="step3FallbackArea" class="hidden space-y-1">
+              <p class="text-xs text-muted">Network issue? Use this direct link:</p>
+              <a id="qMailLink" href="#" class="font-mono text-xs font-semibold text-[#2ea836] hover:underline">Email RFQ directly →</a>
+            </div>
+          </div><!-- /step3SuccessBody -->
+
+        </div><!-- /wizardPanel-3 -->
+
       </form>
     </div>
 
@@ -1499,8 +1584,8 @@
       </div>
     </div>
 
-    <!-- Sticky Wizard Step Navigation Footer (Back / Continue / Generate RFQ) -->
-    <div class="flex items-center justify-between gap-3 border-t border-line bg-pureBlack px-4 py-3">
+    <!-- Sticky Wizard Step Navigation Footer (Back / Continue / Submit RFQ) -->
+    <div id="wizardFooter" class="flex items-center justify-between gap-3 border-t border-line bg-pureBlack px-4 py-3">
       <button
         type="button"
         id="wizardBackBtn"
@@ -1524,9 +1609,9 @@
         type="submit"
         form="quoteForm"
         id="wizardSubmitBtn"
-        class="hidden rounded-md bg-white px-5 py-2 text-xs font-bold tracking-wider text-black uppercase transition hover:bg-neutral-200"
+        class="hidden w-full rounded-lg bg-white py-3.5 text-xs font-bold tracking-wider text-black uppercase transition hover:bg-zinc-200"
       >
-        Generate RFQ &rarr;
+        SUBMIT RFQ &rarr;
       </button>
     </div>
   </aside>
@@ -2007,6 +2092,14 @@
       // Show spec summary card only on step 1
       const summaryCard = document.getElementById('step1SpecSummaryCard');
       if (summaryCard) summaryCard.classList.toggle('hidden', currentWizardStep !== 1);
+
+      // Populate Step 3 config summary when arriving at step 3
+      if (currentWizardStep === 3) {
+        const configLine = document.getElementById('step3ConfigLine');
+        const configSub = document.getElementById('step3ConfigSub');
+        if (configLine) configLine.textContent = getStep1SummaryText();
+        if (configSub) configSub.textContent = getStep2SummaryText();
+      }
     }
 
     function nextWizardStep() {
@@ -2066,8 +2159,15 @@
         if (notesEl) notesEl.value = preset.note;
       }
 
-      const resultBox = document.getElementById('qResultBox');
-      if (resultBox) resultBox.classList.add('hidden');
+      // Reset step 3 state for fresh open
+      const s3form = document.getElementById('step3FormBody');
+      const s3success = document.getElementById('step3SuccessBody');
+      const s3submitBtn = document.getElementById('wizardSubmitBtn');
+      const drawerFooter = document.getElementById('wizardFooter');
+      if (s3form) s3form.classList.remove('hidden');
+      if (s3success) s3success.classList.add('hidden');
+      if (s3submitBtn) { s3submitBtn.disabled = false; s3submitBtn.textContent = 'SUBMIT RFQ →'; }
+      if (drawerFooter) drawerFooter.classList.remove('hidden');
 
       goToWizardStep(1);
 
@@ -2085,75 +2185,120 @@
       if (drawer) drawer.classList.add('translate-x-full');
     }
 
-    function submitCompactQuote(e) {
+    async function submitCompactQuote(e) {
       e.preventDefault();
-      const qty = document.getElementById('qQty').value.trim() || 'TBD';
-      const name = document.getElementById('qName').value.trim();
-      const company = document.getElementById('qCompany').value.trim();
-      const email = document.getElementById('qEmail').value.trim();
-      const phone = document.getElementById('qPhone').value.trim() || 'N/A';
-      const notes = document.getElementById('qNotes').value.trim() || 'None';
 
-      let specLines = [];
+      const qty      = document.getElementById('qQty')?.value.trim() || 'TBD';
+      const shipDate = document.getElementById('qShipDate')?.value.trim() || 'N/A';
+      const name     = document.getElementById('qName')?.value.trim() || '';
+      const company  = document.getElementById('qCompany')?.value.trim() || '';
+      const email    = document.getElementById('qEmail')?.value.trim() || '';
+      const phone    = document.getElementById('qPhone')?.value.trim() || 'N/A';
+      const zip      = document.getElementById('qZip')?.value.trim() || 'N/A';
+      const notes    = document.getElementById('qNotes')?.value.trim() || 'None';
+
+      let specFields = {};
       let subjectTag = '';
 
       if (activeDrawerMode === 'valves') {
         const vBrand = document.getElementById('qValveBrand')?.value || 'Goyen® (Original / Replacement)';
-        const vPart = document.getElementById('qValvePartNum')?.value.trim() || 'TBD';
-        const vPref = document.getElementById('qValvePreference')?.value || 'Original OEM or Equivalent Replacement';
-        const vVolt = document.getElementById('qValveVoltage')?.value.trim() || 'Standard / N/A';
-        specLines = [
-          `Division:     VALVES, KITS & CONTROLLER BOARDS`,
-          `Brand:        ${vBrand}`,
-          `Part #(s):    ${vPart}`,
-          `Preference:   ${vPref}`,
-          `Voltage/Spec: ${vVolt}`,
-          `Quantity:     ${qty}`
-        ];
+        const vPart  = document.getElementById('qValvePartNum')?.value.trim() || 'TBD';
+        const vPref  = document.getElementById('qValvePreference')?.value || 'Original OEM or Equivalent Replacement';
+        const vVolt  = document.getElementById('qValveVoltage')?.value.trim() || 'Standard / N/A';
+        specFields = { 'Division': 'VALVES, KITS & CONTROLLER BOARDS', 'Brand': vBrand, 'Part #(s)': vPart, 'Preference': vPref, 'Voltage / Spec': vVolt };
         subjectTag = `${vBrand} [${vPart}]`;
       } else {
-        const oem = document.getElementById('qOemBadge').textContent.trim() || 'Other / Custom';
-        const dia = document.getElementById('qDiameter')?.value.trim();
-        const len = document.getElementById('qLength')?.value.trim();
-        const dims = (dia || len) ? `${dia || '?'} x ${len || '?'}` : 'TBD';
-        const fabricWeight = activeDrawerMode === 'bags'
-          ? (document.getElementById('qFabricWeight')?.value || 'Not Sure / Match OEM Spec')
-          : null;
-        specLines = [
-          `Division:     ${activeDrawerMode.toUpperCase()}`,
-          `Collector:    ${oem}`,
-          `Dimensions:   ${dims}`,
-          `Style & Spec: ${getStep1SummaryText()}`,
-          `Media:        ${document.getElementById('qBagMedia')?.value || getStep2SummaryText()}`,
-          ...(fabricWeight ? [`Fabric Wt:    ${fabricWeight}`] : []),
-          `Ends:         ${activeDrawerMode === 'bags' ? ((document.getElementById('qTopConst')?.value || 'Stainless Snap-Band') + ' / ' + (document.getElementById('qBottomConst')?.value || 'Standard Sewn Disc Bottom')) : getStep2SummaryText()}`,
-          `Quantity:     ${qty}`
-        ];
+        const oem  = document.getElementById('qOemBadge')?.textContent.trim() || 'Other / Custom';
+        const dia  = document.getElementById('qDiameter')?.value.trim();
+        const len  = document.getElementById('qLength')?.value.trim();
+        const dims = (dia || len) ? `${dia || '?'} × ${len || '?'}` : 'TBD';
+        const fw   = activeDrawerMode === 'bags' ? (document.getElementById('qFabricWeight')?.value || null) : null;
+        const ends = activeDrawerMode === 'bags'
+          ? ((document.getElementById('qTopConst')?.value || 'Stainless Snap-Band') + ' / ' + (document.getElementById('qBottomConst')?.value || 'Standard Sewn Disc Bottom'))
+          : getStep2SummaryText();
+        specFields = {
+          'Division':    activeDrawerMode.toUpperCase(),
+          'Style':       getStep1SummaryText(),
+          'Media / Spec': document.getElementById('qBagMedia')?.value || getStep2SummaryText(),
+          'Collector OEM': oem,
+          'Dimensions':  dims,
+          'End Construction': ends,
+          ...(fw ? { 'Fabric Weight': fw } : {})
+        };
         subjectTag = `${oem} [${dims}]`;
       }
 
-      const summary = [
-        `MOUNT HOOD FILTRATION — QUOTE REQUEST`,
-        `----------------------------------------`,
-        ...specLines,
-        `----------------------------------------`,
-        `Contact:      ${name} (${company})`,
-        `Email:        ${email}`,
-        `Phone:        ${phone}`,
-        `Notes:        ${notes}`
+      const allFields = {
+        ...specFields,
+        'Quantity':          qty,
+        'Target Ship Date':  shipDate,
+        'Full Name':         name,
+        'Company / Plant':   company,
+        'Work Email':        email,
+        'Phone':             phone,
+        'Ship-To Zip':       zip,
+        'Notes':             notes
+      };
+
+      const summaryLines = Object.entries(allFields).map(([k, v]) => `${k}: ${v}`);
+      const summaryText = [
+        'MOUNT HOOD FILTRATION — RFQ',
+        '─'.repeat(38),
+        ...summaryLines,
+        '─'.repeat(38)
       ].join('\n');
 
-      const summaryEl = document.getElementById('qSummaryText');
-      const resultBox = document.getElementById('qResultBox');
-      const mailLink = document.getElementById('qMailLink');
+      const mailSubject = encodeURIComponent(`RFQ: ${subjectTag} (${qty}) — ${company}`);
+      const mailBody    = encodeURIComponent(summaryText);
+      const mailHref    = `mailto:info@mounthoodfiltration.com?subject=${mailSubject}&body=${mailBody}`;
 
-      if (summaryEl) summaryEl.textContent = summary;
-      if (mailLink) {
-        const subject = encodeURIComponent(`RFQ: ${subjectTag} (${qty}) — ${company}`);
-        const body = encodeURIComponent(summary);
-        mailLink.href = `mailto:info@mounthoodfiltration.com?subject=${subject}&body=${body}`;
+      // UI refs
+      const formBody    = document.getElementById('step3FormBody');
+      const successBody = document.getElementById('step3SuccessBody');
+      const resultIcon  = document.getElementById('step3ResultIcon');
+      const resultTitle = document.getElementById('step3ResultTitle');
+      const resultMsg   = document.getElementById('step3ResultMsg');
+      const summaryBox  = document.getElementById('step3SuccessSummary');
+      const fallback    = document.getElementById('step3FallbackArea');
+      const mailLink    = document.getElementById('qMailLink');
+      const submitBtn   = document.getElementById('wizardSubmitBtn');
+      const footer      = document.getElementById('wizardFooter');
+
+      if (submitBtn) { submitBtn.disabled = true; submitBtn.textContent = 'Sending…'; }
+
+      function showResult(ok) {
+        if (formBody)    formBody.classList.add('hidden');
+        if (successBody) successBody.classList.remove('hidden');
+        if (summaryBox)  summaryBox.textContent = summaryText;
+        if (mailLink)    mailLink.href = mailHref;
+        if (footer)      footer.classList.add('hidden');
+        if (!ok) {
+          if (resultIcon)  { resultIcon.className = 'mx-auto flex h-14 w-14 items-center justify-center rounded-full border border-yellow-500/40 bg-yellow-500/10'; resultIcon.innerHTML = '<svg class="h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2.2"><path d="M12 9v4M12 17h.01M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/></svg>'; }
+          if (resultTitle) resultTitle.textContent = 'Submission Note';
+          if (resultMsg)   resultMsg.textContent = 'Network issue. Please use the direct email link below.';
+          if (fallback)    fallback.classList.remove('hidden');
+        }
       }
-      if (resultBox) resultBox.classList.remove('hidden');
+
+      try {
+        const res  = await fetch('https://formsubmit.co/ajax/info@mounthoodfiltration.com', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: JSON.stringify({
+            _subject: 'New Baghouse RFQ — Mount Hood Filtration',
+            _template: 'table',
+            _captcha: 'false',
+            ...allFields
+          })
+        });
+        const data = await res.json().catch(() => ({}));
+        showResult(res.ok && data.success !== false);
+        if (!res.ok || data.success === false) {
+          if (fallback) fallback.classList.remove('hidden');
+        }
+      } catch (_err) {
+        showResult(false);
+      }
     }
 
     function copySpecText() {
