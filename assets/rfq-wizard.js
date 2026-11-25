@@ -381,6 +381,20 @@
               </div>
             </div>
 
+            <!-- Conditional: Cell Plate specs (Stainless Snap-Band only) -->
+            <div id="cellPlatePanel" style="overflow:hidden; max-height:12rem; opacity:1; transition:max-height .25s ease, opacity .2s ease, margin .25s ease;">
+              <div class="grid grid-cols-2 gap-2 rounded-md border border-line bg-surface/40 p-2.5">
+                <label class="block">
+                  <span class="mb-1 block font-mono text-[10px] text-muted uppercase">Cell Plate Diameter</span>
+                  <input id="qCellPlateDia" type="text" inputmode="decimal" oninput="updateWizardSummaryBadges()" placeholder='e.g., 6.125" or mm' class="w-full rounded-md border border-line bg-surface px-2.5 py-1.5 font-mono text-xs text-white placeholder-muted/50 focus:border-white focus:outline-none" />
+                </label>
+                <label class="block">
+                  <span class="mb-1 block font-mono text-[10px] text-muted uppercase">Cell Plate Thickness</span>
+                  <input id="qCellPlateThk" type="text" inputmode="decimal" oninput="updateWizardSummaryBadges()" placeholder='e.g., 0.1875" / 10 ga' class="w-full rounded-md border border-line bg-surface px-2.5 py-1.5 font-mono text-xs text-white placeholder-muted/50 focus:border-white focus:outline-none" />
+                </label>
+              </div>
+            </div>
+
             <div class="relative">
               <span class="mb-1 block font-mono text-[10px] text-muted uppercase">Bottom Construction</span>
               <input type="hidden" id="qBottomConst" value="Standard Sewn Disc Bottom" />
@@ -392,6 +406,15 @@
                 <button type="button" onclick="pickCustomOption('qBottomConst', 'ddLabel-botConst', 'Standard Sewn Disc Bottom')" class="block w-full rounded px-2.5 py-1.5 text-left font-mono text-xs text-white hover:bg-surface">Standard Sewn Disc Bottom</button>
                 <button type="button" onclick="pickCustomOption('qBottomConst', 'ddLabel-botConst', 'Folded / Flat-Sewn Bottom')" class="block w-full rounded px-2.5 py-1.5 text-left font-mono text-xs text-white hover:bg-surface">Folded / Flat-Sewn Bottom</button>
                 <button type="button" onclick="pickCustomOption('qBottomConst', 'ddLabel-botConst', 'Open / Beaded / Raw Edge')" class="block w-full rounded px-2.5 py-1.5 text-left font-mono text-xs text-white hover:bg-surface">Open / Beaded / Raw Edge</button>
+              </div>
+            </div>
+
+            <div>
+              <span id="wearCuffLabel" class="mb-1 block font-mono text-[10px] text-muted uppercase">Wear Cuff Needed?</span>
+              <input type="hidden" id="qWearCuff" value="No" />
+              <div class="flex gap-2" role="radiogroup" aria-labelledby="wearCuffLabel">
+                <button type="button" id="wearCuffBtn-Yes" role="radio" aria-checked="false" onclick="setWearCuff('Yes')" class="flex-1 rounded-md border px-3 py-2 font-mono text-xs transition border-line bg-surface text-muted hover:border-white hover:text-white">Yes</button>
+                <button type="button" id="wearCuffBtn-No" role="radio" aria-checked="true" onclick="setWearCuff('No')" class="flex-1 rounded-md border px-3 py-2 font-mono text-xs transition border-white bg-white font-bold text-black">No</button>
               </div>
             </div>
           </div>
@@ -697,11 +720,61 @@
     }
   }
 
+  const CELL_PLATE_TOP = 'Stainless Snap-Band';
+
+  function isCellPlateActive() {
+    return activeDrawerMode === 'bags' && (document.getElementById('qTopConst')?.value || CELL_PLATE_TOP) === CELL_PLATE_TOP;
+  }
+
+  // Show the Cell Plate inputs only for Stainless Snap-Band tops; hide + clear otherwise.
+  function syncCellPlatePanel() {
+    const panel = document.getElementById('cellPlatePanel');
+    if (!panel) return;
+    const show = (document.getElementById('qTopConst')?.value || CELL_PLATE_TOP) === CELL_PLATE_TOP;
+    panel.style.maxHeight = show ? '12rem' : '0px';
+    panel.style.opacity = show ? '1' : '0';
+    panel.style.marginTop = show ? '' : '-0.75rem'; // collapse the space-y gap too
+    panel.setAttribute('aria-hidden', show ? 'false' : 'true');
+    panel.querySelectorAll('input').forEach((inp) => {
+      inp.disabled = !show;
+      if (!show) inp.value = '';
+    });
+  }
+
+  function setWearCuff(value) {
+    const val = value === 'Yes' ? 'Yes' : 'No';
+    const hidden = document.getElementById('qWearCuff');
+    if (hidden) hidden.value = val;
+    ['Yes', 'No'].forEach((opt) => {
+      const btn = document.getElementById(`wearCuffBtn-${opt}`);
+      if (!btn) return;
+      const on = opt === val;
+      btn.setAttribute('aria-checked', on ? 'true' : 'false');
+      ['border-white', 'bg-white', 'font-bold', 'text-black'].forEach((c) => btn.classList.toggle(c, on));
+      ['border-line', 'bg-surface', 'text-muted', 'hover:border-white', 'hover:text-white'].forEach((c) => btn.classList.toggle(c, !on));
+    });
+    updateWizardSummaryBadges();
+  }
+
+  function getEndConstructionText() {
+    const top = document.getElementById('qTopConst')?.value || CELL_PLATE_TOP;
+    const bot = document.getElementById('qBottomConst')?.value || 'Standard Sewn Disc Bottom';
+    let text = `${top} / ${bot}`;
+    if (isCellPlateActive()) {
+      const dia = document.getElementById('qCellPlateDia')?.value.trim();
+      const thk = document.getElementById('qCellPlateThk')?.value.trim();
+      if (dia || thk) text = `${top} (Cell Plate ${dia || '?'} × ${thk || '?'}) / ${bot}`;
+    }
+    const cuff = document.getElementById('qWearCuff')?.value || 'No';
+    return `${text} · Wear Cuff: ${cuff}`;
+  }
+
   function pickCustomOption(hiddenInputId, labelId, value) {
     const hidden = document.getElementById(hiddenInputId);
     const label = document.getElementById(labelId);
     if (hidden) hidden.value = value;
     if (label) label.textContent = value;
+    if (hiddenInputId === 'qTopConst') syncCellPlatePanel();
     closeAllCustomDropdowns();
     updateWizardSummaryBadges();
   }
@@ -801,9 +874,7 @@
     if (activeDrawerMode === 'bags') {
       const media = document.getElementById('qBagMedia')?.value || 'Polyester Felt 275°F';
       const weight = document.getElementById('qFabricWeight')?.value || '14 oz/sq. yd. (Standard Felt)';
-      const top = document.getElementById('qTopConst')?.value || 'Stainless Snap-Band';
-      const bot = document.getElementById('qBottomConst')?.value || 'Standard Sewn Disc Bottom';
-      return `${media} · ${weight} (${top} / ${bot})`;
+      return `${media} · ${weight} (${getEndConstructionText()})`;
     }
     if (activeDrawerMode === 'cages') {
       const mat   = document.getElementById('qCageMaterial')?.value || 'Galvanized Steel (Standard)';
@@ -1090,6 +1161,14 @@
         const ends = activeDrawerMode === 'bags'
           ? ((document.getElementById('qTopConst')?.value || 'Stainless Snap-Band') + ' / ' + (document.getElementById('qBottomConst')?.value || 'Standard Sewn Disc Bottom'))
           : getStep2SummaryText();
+        const bagExtras = {};
+        if (activeDrawerMode === 'bags') {
+          if (isCellPlateActive()) {
+            bagExtras['Cell Plate Diameter']  = document.getElementById('qCellPlateDia')?.value.trim() || 'TBD';
+            bagExtras['Cell Plate Thickness'] = document.getElementById('qCellPlateThk')?.value.trim() || 'TBD';
+          }
+          bagExtras['Wear Cuff Needed'] = document.getElementById('qWearCuff')?.value || 'No';
+        }
         specFields = {
           'Division':    activeDrawerMode.toUpperCase(),
           'Style':       getStep1SummaryText(),
@@ -1097,6 +1176,7 @@
           'Collector OEM': oem,
           'Dimensions':  dims,
           'End Construction': ends,
+          ...bagExtras,
           ...(fw ? { 'Fabric Weight': fw } : {})
         };
         subjectTag = `${oem} [${dims}]`;
@@ -1226,6 +1306,7 @@
       document.body.insertAdjacentHTML('beforeend', DRAWER_HTML);
     }
     renderDrawerOemChips();
+    syncCellPlatePanel();
     setDrawerMode('bags');
     goToWizardStep(1);
   }
@@ -1236,7 +1317,7 @@
     renderDrawerOemChips, closeAllCustomDropdowns, toggleCustomDropdown,
     pickCustomOption, updateWizardSummaryBadges, fillCommonSize,
     toggleUnknownDims, goToWizardStep, nextWizardStep, prevWizardStep,
-    submitCompactQuote, copySpecText
+    submitCompactQuote, copySpecText, setWearCuff
   });
 
   window.MHF_RFQ = {
