@@ -78,7 +78,7 @@
     tailwind.config = {
       darkMode: 'class',
       theme: { extend: { fontFamily: { sans: ['Inter','system-ui','sans-serif'], mono: ['JetBrains Mono','monospace'] },
-        colors: { pureBlack:'#000000', surface:'#0A0A0A', line:'#222222', muted:'#888888' } } }
+        colors: { pureBlack:'#000000', surface:'#0A0A0A', surfaceHover:'#141414', line:'#222222', muted:'#888888' } } }
     };
   </script>
   <style>
@@ -114,7 +114,7 @@
           </span>
         </nav>
       </div>
-      <a href="index.html" class="hidden sm:inline-flex rounded-md bg-white px-4 py-2 text-xs font-bold tracking-wider text-black uppercase transition hover:bg-neutral-200">Request a Quote</a>
+      <a href="mailto:info@mounthoodfiltration.com?subject=RFQ%20-%20Cages%20%26%20Venturis" data-rfq-mode="cages" class="hidden sm:inline-flex rounded-md bg-white px-4 py-2 text-xs font-bold tracking-wider text-black uppercase transition hover:bg-neutral-200">Request a Quote</a>
     </div>
   </header>
 
@@ -125,7 +125,7 @@
         <h1 class="mx-auto mt-3 max-w-3xl text-3xl font-extrabold tracking-tight text-white sm:text-5xl">Wire Filter Cages &amp; Spun Venturis.</h1>
         <p class="mx-auto mt-4 max-w-2xl text-sm text-muted sm:text-base">Custom and OEM-replacement dust collector filter cages in carbon steel, galvanized steel, and 304/316 stainless. Oval, round, snap-ring, venturi, and multi-piece split-cage configurations for every baghouse type.</p>
         <div class="mt-7">
-          <a href="index.html" class="rounded-md bg-white px-5 py-2.5 text-xs font-bold tracking-wider text-black uppercase transition hover:bg-neutral-200">Request a Quote</a>
+          <a href="mailto:info@mounthoodfiltration.com?subject=RFQ%20-%20Cages%20%26%20Venturis" data-rfq-mode="cages" class="rounded-md bg-white px-5 py-2.5 text-xs font-bold tracking-wider text-black uppercase transition hover:bg-neutral-200">Request a Quote</a>
         </div>
       </div>
     </section>
@@ -364,7 +364,7 @@
           <p class="text-sm font-semibold text-white">Need a cage quote or OEM cross-reference?</p>
           <p class="mt-1 text-xs text-muted">Hood River, OR &bull; (541) 275-0340 &bull; info@mounthoodfiltration.com</p>
         </div>
-        <a href="index.html" class="shrink-0 rounded-md bg-white px-5 py-2.5 text-xs font-bold tracking-wider text-black uppercase transition hover:bg-neutral-200">Request a Quote &rarr;</a>
+        <a href="mailto:info@mounthoodfiltration.com?subject=RFQ%20-%20Cages%20%26%20Venturis" data-rfq-mode="cages" class="shrink-0 rounded-md bg-white px-5 py-2.5 text-xs font-bold tracking-wider text-black uppercase transition hover:bg-neutral-200">Request a Quote &rarr;</a>
       </div>
     </section>
   </main>
@@ -379,6 +379,7 @@
     </div>
   </footer>
 
+  <script src="assets/rfq-wizard.js"></script>
   <script src="assets/quick-contact.js"></script>
   <script>
     function mhfToggleFaq(btn) {
