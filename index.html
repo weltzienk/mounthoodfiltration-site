@@ -166,7 +166,7 @@
 
       <!-- Left: Wide-Tracked Wordmark -->
       <div class="flex items-center gap-8 lg:gap-10">
-        <a href="#" onclick="switchMainView('bags'); return false;" class="inline-flex flex-col select-none group" aria-label="Mount Hood Industrial Filtration Solutions">
+        <a href="#" onclick="switchMainView('bags'); return false;" class="inline-flex shrink-0 flex-col select-none group" aria-label="Mount Hood Industrial Filtration Solutions">
           <svg viewBox="0 0 340 68" class="h-11 w-auto overflow-visible" xmlns="http://www.w3.org/2000/svg">
             <text x="170" y="42" text-anchor="middle" font-family="'Kaushan Script', 'Brush Script MT', 'Segoe Script', cursive" font-weight="900" font-style="italic" font-size="44" letter-spacing="-0.5">
               <tspan fill="#2ea836">Mount</tspan>
@@ -178,32 +178,32 @@
           </svg>
         </a>
 
-        <!-- Clean Horizontal Navigation Links (5 Core Tabs) -->
-        <nav class="hidden items-center gap-6 md:flex" aria-label="Primary Navigation">
-          <button id="topNav-bags" onclick="switchMainView('bags')" class="top-nav-link relative py-5 text-[13px] font-semibold tracking-wide transition">
+        <!-- Clean Horizontal Navigation Links (6 Core Tabs) -->
+        <nav class="hidden items-center gap-6 lg:flex" aria-label="Primary Navigation">
+          <button id="topNav-bags" onclick="switchMainView('bags')" class="top-nav-link relative whitespace-nowrap py-5 text-[13px] font-semibold tracking-wide transition">
             <span>Filter Bags</span>
             <span class="nav-indicator absolute inset-x-0 bottom-0 h-[2px] bg-white"></span>
           </button>
 
-          <a href="cages.html" class="top-nav-link relative py-5 text-[13px] font-semibold tracking-wide transition hover:text-white text-muted">Cages &amp; Venturis</a>
-          <a href="cartridges.html" class="top-nav-link relative py-5 text-[13px] font-semibold tracking-wide transition hover:text-white text-muted">Cartridges</a>
-          <a href="valves.html" class="top-nav-link relative py-5 text-[13px] font-semibold tracking-wide transition hover:text-white text-muted">Valves &amp; Kits</a>
+          <a href="cages.html" class="top-nav-link relative whitespace-nowrap py-5 text-[13px] font-semibold tracking-wide transition hover:text-white text-muted">Cages &amp; Venturis</a>
+          <a href="cartridges.html" class="top-nav-link relative whitespace-nowrap py-5 text-[13px] font-semibold tracking-wide transition hover:text-white text-muted">Cartridges</a>
+          <a href="valves.html" class="top-nav-link relative whitespace-nowrap py-5 text-[13px] font-semibold tracking-wide transition hover:text-white text-muted">Valves &amp; Kits</a>
 
-          <a href="field-services.html" class="top-nav-link relative py-5 text-[13px] font-semibold tracking-wide transition hover:text-white text-muted">
+          <a href="field-services.html" class="top-nav-link relative whitespace-nowrap py-5 text-[13px] font-semibold tracking-wide transition hover:text-white text-muted">
             <span>Field Services</span>
           </a>
 
-          <button id="topNav-about" onclick="switchMainView('about')" class="top-nav-link relative py-5 text-[13px] font-semibold tracking-wide transition">
+          <button id="topNav-about" onclick="switchMainView('about')" class="top-nav-link relative whitespace-nowrap py-5 text-[13px] font-semibold tracking-wide transition">
             <span>About</span>
             <span class="nav-indicator absolute inset-x-0 bottom-0 hidden h-[2px] bg-white"></span>
           </button>
           <span class="h-4 w-px bg-white/15 mx-4"></span>
-          <span class="hidden lg:inline-flex items-center gap-2 text-xs font-medium tracking-wider text-zinc-400 select-none"><span class="h-1.5 w-1.5 rounded-full bg-[#2ea836]"></span>Forged in the Gorge. Built for the Nation.</span>
+          <span class="hidden xl:inline-flex items-center gap-2 whitespace-nowrap text-xs font-medium tracking-wider text-zinc-400 select-none"><span class="h-1.5 w-1.5 rounded-full bg-[#2ea836]"></span>Forged in the Gorge. Built for the Nation.</span>
         </nav>
       </div>
 
       <!-- Right: Mobile Menu Toggle -->
-      <div class="flex items-center md:hidden">
+      <div class="flex items-center lg:hidden">
         <button onclick="toggleMobileMenu()" class="rounded-md border border-line p-1.5 text-muted hover:text-white" aria-label="Open Navigation">
           <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
             <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
@@ -213,7 +213,7 @@
     </div>
 
     <!-- Mobile Navigation Drawer -->
-    <div id="mobileMenu" class="hidden border-t border-line bg-pureBlack px-4 py-3 md:hidden">
+    <div id="mobileMenu" class="hidden border-t border-line bg-pureBlack px-4 py-3 lg:hidden">
       <div class="flex flex-col space-y-1">
         <button onclick="switchMainView('bags'); toggleMobileMenu()" class="rounded-md px-3 py-2 text-left text-sm font-semibold text-white hover:bg-surface">Filter Bags</button>
         <a href="cages.html" class="rounded-md px-3 py-2 text-left text-sm font-semibold text-white hover:bg-surface block">Cages &amp; Venturis</a>
@@ -1612,7 +1612,8 @@
 
     document.addEventListener('DOMContentLoaded', () => {
       renderOemGrid();
-      switchMainView('bags');
+      // Sub-page "About" links point to index.html#about
+      switchMainView(location.hash === '#about' ? 'about' : 'bags');
     });
   </script>
   <script src="assets/quick-contact.js"></script>
